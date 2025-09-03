@@ -109,7 +109,7 @@ public partial class VisualCodeScript
         dynamicDescription = "Spin $ by $ for $",
         icon = unitIcon)]
     [UnitArg(argType = ArgType.Temp, allowValue = false)]
-    [NumberArg(argType = ArgType.Value, defaultValue = 360, suffix = "º/s")]
+    [NumberArg(argType = ArgType.Value, defaultValue = 360, suffix = "ï¿½/s")]
     [NumberArg(argType = ArgType.Value, defaultValue = 1, suffix = "s")]
     public void SpinUnit(Unit unit, float speed, float duration)
     {
@@ -833,7 +833,7 @@ public partial class VisualCodeScript
         dynamicDescription = "Rotate $ by $",
         icon = projectileIcon)]
     [ProjectileArg(argType = ArgType.Preset, preset = LogicEngine.PRESET_PROJECTILE_LAST_CREATED, allowValue = false)]
-    [NumberArg(argType = ArgType.Value, defaultValue = 30, suffix = "º")]
+    [NumberArg(argType = ArgType.Value, defaultValue = 30, suffix = "ï¿½")]
     public void RotateProjectile(Projectile projectile, float amount)
     {
         Error(projectile == null, "The specified projectile was invalid.");
