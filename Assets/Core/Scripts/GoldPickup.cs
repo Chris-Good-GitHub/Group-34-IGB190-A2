@@ -42,6 +42,11 @@ public class GoldPickup : MonoBehaviour
         {
             PickupGold();
         }
+
+        if (Input.GetKeyDown(KeyCode.G))
+        {
+            GameManager.player.AddGold(99999);
+        }
     }
 
     /// <summary>
