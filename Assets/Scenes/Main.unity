@@ -9329,6 +9329,7 @@ MonoBehaviour:
   baseCriticalStrikeDamage: 1.5
   baseHealthRegen: 20
   baseResourceRegen: 8
+  marked: 0
   baseAttackRange: 2
   abilities:
   - {fileID: 11400000, guid: 63a782021e0dcd343a62943c5471ba6c, type: 2}
@@ -15001,6 +15002,7 @@ MonoBehaviour:
   baseCriticalStrikeDamage: 1.5
   baseHealthRegen: 20
   baseResourceRegen: 0
+  marked: 0
   baseAttackRange: 2.5
   abilities:
   - {fileID: 11400000, guid: cbbf2357a81cf204b8dadb4602904de0, type: 2}
@@ -18740,6 +18742,67 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1328142048}
   m_CullTransparentMesh: 1
+--- !u!1001 &1334170906
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: eb904bb9f5421d94ab64daab48bbba6c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: eb904bb9f5421d94ab64daab48bbba6c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: eb904bb9f5421d94ab64daab48bbba6c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: eb904bb9f5421d94ab64daab48bbba6c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: eb904bb9f5421d94ab64daab48bbba6c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: eb904bb9f5421d94ab64daab48bbba6c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: eb904bb9f5421d94ab64daab48bbba6c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: eb904bb9f5421d94ab64daab48bbba6c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: eb904bb9f5421d94ab64daab48bbba6c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: eb904bb9f5421d94ab64daab48bbba6c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: eb904bb9f5421d94ab64daab48bbba6c, type: 3}
+      propertyPath: m_Name
+      value: Vampire A Lusth
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: eb904bb9f5421d94ab64daab48bbba6c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: eb904bb9f5421d94ab64daab48bbba6c, type: 3}
 --- !u!1001 &1336336557
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28732,6 +28795,7 @@ MonoBehaviour:
   baseCriticalStrikeDamage: 1.5
   baseHealthRegen: 20
   baseResourceRegen: 2
+  marked: 0
   baseAttackRange: 2
   abilities:
   - {fileID: 11400000, guid: 8d6cb31825c2de4448e88dbc2385d12f, type: 2}
@@ -34111,3 +34175,4 @@ SceneRoots:
   - {fileID: 1806430108}
   - {fileID: 623941943}
   - {fileID: 1969667936}
+  - {fileID: 1334170906}
