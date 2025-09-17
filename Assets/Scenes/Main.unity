@@ -14992,7 +14992,7 @@ MonoBehaviour:
   unitName: Barbarian
   health: 500
   resource: 0
-  baseDamage: 20
+  baseDamage: 30
   baseAttacksPerSecond: 1.5
   baseMaxHealth: 200
   baseMaxResource: 100
@@ -31386,11 +31386,11 @@ MonoBehaviour:
     keybindings: 4301000044010000710000007700000065000000720000002000000030010000
   _monsterValues:
     baseGoldDropAmountMinimum: 10
-    baseGoldDropAmountMaximum: 20
-    goldDropChance: 0.2
-    unempoweredMonsterCommonDropChance: 0
-    unempoweredMonsterRareDropChance: 0
-    unempoweredMonsterLegendaryDropChance: 0
+    baseGoldDropAmountMaximum: 150
+    goldDropChance: 0.3
+    unempoweredMonsterCommonDropChance: 0.2
+    unempoweredMonsterRareDropChance: 0.1
+    unempoweredMonsterLegendaryDropChance: 0.01
   _empoweredMonsterValues:
     empoweredMonsterHealthModifier: 2
     empoweredMonsterDamageModifier: 2
