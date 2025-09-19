@@ -20,7 +20,7 @@ MonoBehaviour:
   targetMode: 4
   abilityDescription: Fire an arrow towards the target location, dealing 100% attack
     damage to the enemy hit.
-  abilityAnimation: Bow Shoot
+  abilityAnimation: Magic Channel
   range: 8
   castTime: 0.1
   abilityCooldown: 0
