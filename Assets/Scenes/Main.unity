@@ -28018,8 +28018,14 @@ MonoBehaviour:
   baseCriticalStrikeDamage: 2
   baseHealthRegen: 0
   baseResourceRegen: 0
+  marked: 0
   baseAttackRange: 2
-  abilities: []
+  abilities:
+  - {fileID: 11400000, guid: 1669e6fb6a9074c42a3e9160a2b8c5e1, type: 2}
+  - {fileID: 11400000, guid: a535cae6a337b274190d9ad82d544fb1, type: 2}
+  - {fileID: 11400000, guid: ff60bb7af69a5a24791ca9f3b9180510, type: 2}
+  - {fileID: 11400000, guid: 20229b3f04ee08f4e85d1bd28b71790f, type: 2}
+  - {fileID: 0}
   lastAbilityCast: {fileID: 0}
   handPoint: {fileID: 1533565464}
   onDeathFeedback: {fileID: 0}
