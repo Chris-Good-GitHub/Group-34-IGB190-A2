@@ -8,7 +8,7 @@ using UnityEngine;
 
 public class Player : Unit
 {
-    [HideInInspector] public float currentGold = 0;
+    [HideInInspector] public float currentGold = 1000000;
     [HideInInspector] public int currentLevel = 1;
     [HideInInspector] public float currentExperience = 0;
     [HideInInspector] public float experienceToNextLevel = 100;
