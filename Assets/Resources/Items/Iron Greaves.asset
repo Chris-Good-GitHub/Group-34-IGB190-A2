@@ -10,20 +10,44 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c1cdd5fc33fd8b841b7c7cd7dff9b881, type: 3}
-  m_Name: Boots
+  m_Name: Iron Greaves
   m_EditorClassIdentifier: 
-  itemName: Boots
+  itemName: Iron Greaves
   itemDescription: 
   itemTag: 
-  itemFlavourText: 
+  itemFlavourText: A pair of slightly rusted iron greaves.
   classRequirement: 
   itemIcon: {fileID: 21300000, guid: 87a6ace052badc94890297eb1f920c27, type: 3}
   itemType: 4
-  itemRarity: 0
-  itemCost: 0
-  randomStatCount: 0
-  guaranteedStats: []
-  randomisableStats: []
+  itemRarity: 1
+  itemCost: 550
+  randomStatCount: 3
+  guaranteedStats:
+  - stat: 6
+    minimum: 0.4
+    maximum: 0.6
+    isPercent: 1
+  randomisableStats:
+  - stat: 1
+    minimum: 2
+    maximum: 6
+    isPercent: 0
+  - stat: 7
+    minimum: 0.1
+    maximum: 0.4
+    isPercent: 1
+  - stat: 8
+    minimum: 0.1
+    maximum: 0.3
+    isPercent: 1
+  - stat: 1
+    minimum: 0.01
+    maximum: 0.05
+    isPercent: 1
+  - stat: 3
+    minimum: 0.01
+    maximum: 0.05
+    isPercent: 1
   minimumDropLevel: 0
   canPurchaseInShop: 1
   canDropOffMonster: 1
@@ -31,17 +55,17 @@ MonoBehaviour:
   engine:
     scripts:
     - scriptName: Item Equipped
-      scriptUID: 999062800
+      scriptUID: 553828061
       hasWait: 0
       eventNodes:
-      - rid: 248813236419559503
+      - rid: 7831317306299908172
       conditionNodes: []
       actionNodes: []
     - scriptName: Item Unequipped
-      scriptUID: 1023413636
+      scriptUID: 415108645
       hasWait: 0
       eventNodes:
-      - rid: 248813236419559504
+      - rid: 7831317306299908173
       conditionNodes: []
       actionNodes: []
   references:
@@ -49,7 +73,7 @@ MonoBehaviour:
     RefIds:
     - rid: -2
       type: {class: , ns: , asm: }
-    - rid: 248813236419559503
+    - rid: 7831317306299908172
       type: {class: EventNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 2
@@ -70,7 +94,7 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         presets: []
-    - rid: 248813236419559504
+    - rid: 7831317306299908173
       type: {class: EventNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 2
