@@ -22,19 +22,19 @@ MonoBehaviour:
   abilityAnimation: None
   range: 999
   castTime: 0
-  abilityCooldown: 10
+  abilityCooldown: 0
   abilityCost: 0
   movementLock: 1
   animationActivationPosition: 0.5
   canMoveWhileCasting: 1
-  hasSpecificCastTime: 1
+  hasSpecificCastTime: 0
   cooldownIsAtackSpeed: 0
   abilityGeneratesResource: 0
-  requiresLineOfSight: 1
-  canUpdateTargetWhileCasting: 1
+  requiresLineOfSight: 0
+  canUpdateTargetWhileCasting: 0
   castAtClosestPointInRange: 0
   castCompleteSound: {fileID: 0}
-  castCompleteSoundVolume: 1
+  castCompleteSoundVolume: 0
   needsReminderFlash: 0
   isUnlocked: 1
   abilityTag: 
