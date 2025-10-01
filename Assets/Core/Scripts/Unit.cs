@@ -71,7 +71,7 @@ public class Unit : Interactable
         "None", "One Hand Slash", "One Hand Stab", "Two Hand Slash", "Cheer",
         "Shout", "Pickup", "Magic Channel", "Magic Area Attack", "Punch",
         "Bow Shoot", "Jump", "Magic Front Attack", "Roll", "Custom1", "Custom2",
-        "Custom3", "Custom4", "Custom5"
+        "Custom3", "Custom4", "Custom5", "Custom6", "Custom7", "Custom8", "Custom9", "Custom10"
     };
 
     public enum Faction { Player, Enemy, Other };

@@ -15,7 +15,7 @@ MonoBehaviour:
   engine:
     rid: 8442518003074990097
   abilityName: Summon Ally
-  abilityFlavourText: 
+  abilityFlavourText: Raise those you have slain as your own.
   abilityIcon: {fileID: 21300000, guid: de62dd11381d6114f9b8f631216eefc4, type: 3}
   targetMode: 4
   abilityDescription: Fire an arrow towards the target location, dealing 100% attack

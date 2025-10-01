@@ -20,7 +20,7 @@ MonoBehaviour:
   targetMode: 4
   abilityDescription: Fire magic towards the target location, dealing 100% attack
     damage and marking the enemies hit.
-  abilityAnimation: Magic Channel
+  abilityAnimation: Custom1
   range: 8
   castTime: 1
   abilityCooldown: 0

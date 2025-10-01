@@ -18,7 +18,7 @@ MonoBehaviour:
   abilityFlavourText: 
   abilityIcon: {fileID: 21300000, guid: fe8e6a489e2efde4fa02ee13706a2edf, type: 3}
   targetMode: 0
-  abilityDescription: Drink your healing potion, Instantly restores 100 health.
+  abilityDescription: Drink your healing potion. Instantly restores 100 health.
   abilityAnimation: None
   range: 999
   castTime: 0

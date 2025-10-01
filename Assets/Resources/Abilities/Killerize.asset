@@ -18,7 +18,7 @@ MonoBehaviour:
   abilityFlavourText: The End.
   abilityIcon: {fileID: 21300000, guid: cfed50201f3cda747a4ab8f1cc8df111, type: 3}
   targetMode: 0
-  abilityDescription: Eviscerates anybody within range. Range is 600,000m.
+  abilityDescription: Eviscerates anybody within range. Range is 600,000 hectares.
   abilityAnimation: None
   range: 999
   castTime: 0
