@@ -70,7 +70,7 @@ public class Unit : Interactable
     public static string[] animations = new string[] { 
         "None", "One Hand Slash", "One Hand Stab", "Two Hand Slash", "Cheer",
         "Shout", "Pickup", "Magic Channel", "Magic Area Attack", "Punch",
-        "Bow Shoot", "Jump", "Magic Front Attack", "Roll", "Custom1", "Custom2",
+        "Bow Shoot", "Jump", "Magic Front Attack", "Roll", "Soul Mark", "Custom2",
         "Custom3", "Custom4", "Custom5", "Custom6", "Custom7", "Custom8", "Custom9", "Custom10"
     };
 
