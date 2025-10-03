@@ -19,7 +19,7 @@ MonoBehaviour:
   abilityIcon: {fileID: 21300000, guid: ebaef5902556fef44b513ae4e893d599, type: 3}
   targetMode: 4
   abilityDescription: 
-  abilityAnimation: None
+  abilityAnimation: Soul Mark
   range: 999
   castTime: 0
   abilityCooldown: 0.1
