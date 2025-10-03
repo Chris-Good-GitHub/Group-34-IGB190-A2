@@ -54,9 +54,7 @@ MonoBehaviour:
           eventNodes:
           - rid: 8442517955232137492
           conditionNodes: []
-          actionNodes:
-          - rid: 8442517955232137493
-          - rid: 8442517955232137494
+          actionNodes: []
         - scriptName: Unit Collision
           scriptUID: 572471226
           hasWait: 0
@@ -100,50 +98,6 @@ MonoBehaviour:
         - Casting Unit
         - Ability Target Location
         - Target Unit
-    - rid: 8442517955232137493
-      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: 
-        functionName: SpawnProjectile
-        functionDescription: Projectile/Spawn Projectile
-        functionDynamicDescription: Spawn $ projectile at $
-        functionEvaluators:
-        - rid: 8442517955232137500
-        - rid: 8442517955232137501
-        parentNode:
-          rid: -2
-        parentNodeID: -1
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: Projectile
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-    - rid: 8442517955232137494
-      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: 
-        functionName: MoveForwardAtSpeed
-        functionDescription: Projectile/Move Projectile Forwards at Set Speed
-        functionDynamicDescription: Move $ forwards at $
-        functionEvaluators:
-        - rid: 8442517955232137502
-        - rid: 8442517955232137503
-        parentNode:
-          rid: -2
-        parentNodeID: -1
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: Projectile
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
     - rid: 8442517955232137495
       type: {class: EventNode, ns: , asm: Assembly-CSharp}
       data:
@@ -259,91 +213,6 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-    - rid: 8442517955232137500
-      type: {class: ProjectileNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: Projectile
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        parentNode:
-          rid: 8442517955232137493
-        parentNodeID: 0
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 0
-        allowFunction: 0
-        value: {fileID: -2277053337341798319, guid: 98736ecf17a7f8d4197c801a0b0f33fd, type: 3}
-    - rid: 8442517955232137501
-      type: {class: VectorNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: Location
-        functionName: CastPointOfUnit
-        functionDescription: Unit/Cast Point of Unit
-        functionDynamicDescription: Cast Point of $
-        functionEvaluators:
-        - rid: 8442517955232137508
-        parentNode:
-          rid: 8442517955232137493
-        parentNodeID: 1
-        indent: 0
-        presetName: Ability Target Location
-        variableName: 
-        stringSuffix: 
-        nodeIcon: 
-        allowValue: 0
-        allowPreset: 1
-        allowFunction: 1
-        value: {x: 0, y: 0, z: 0}
-    - rid: 8442517955232137502
-      type: {class: ProjectileNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 4
-        tempName: 
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        parentNode:
-          rid: 8442517955232137494
-        parentNodeID: 0
-        indent: 0
-        presetName: Last Created Projectile
-        variableName: 
-        stringSuffix: 
-        nodeIcon: 
-        allowValue: 0
-        allowPreset: 1
-        allowFunction: 1
-        value: {fileID: 0}
-    - rid: 8442517955232137503
-      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: 
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        parentNode:
-          rid: 8442517955232137494
-        parentNodeID: 1
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: m/s
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: 30
     - rid: 8442517955232137504
       type: {class: NumberNode, ns: , asm: Assembly-CSharp}
       data:
@@ -421,27 +290,6 @@ MonoBehaviour:
         parentNodeID: 0
         indent: 0
         presetName: Event Projectile
-        variableName: 
-        stringSuffix: 
-        nodeIcon: 
-        allowValue: 0
-        allowPreset: 1
-        allowFunction: 1
-        value: {fileID: 0}
-    - rid: 8442517955232137508
-      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 4
-        tempName: Unit
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        parentNode:
-          rid: 8442517955232137501
-        parentNodeID: 0
-        indent: 0
-        presetName: Casting Unit
         variableName: 
         stringSuffix: 
         nodeIcon: 
