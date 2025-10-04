@@ -27548,7 +27548,7 @@ MonoBehaviour:
   baseMaxResource: 100
   baseMovementSpeed: 3
   baseArmor: 100
-  baseCriticalStrikeChance: 0.2
+  baseCriticalStrikeChance: 0.02
   baseCriticalStrikeDamage: 2
   baseHealthRegen: 0
   baseResourceRegen: 0

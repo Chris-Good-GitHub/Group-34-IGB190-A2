@@ -98,8 +98,8 @@ MonoBehaviour:
   unitName: Skeleton
   health: 100
   resource: 0
-  baseDamage: 10
-  baseAttacksPerSecond: 2
+  baseDamage: 6
+  baseAttacksPerSecond: 0.7
   baseMaxHealth: 200
   baseMaxResource: 100
   baseMovementSpeed: 1
@@ -108,6 +108,7 @@ MonoBehaviour:
   baseCriticalStrikeDamage: 2
   baseHealthRegen: 0
   baseResourceRegen: 0
+  marked: 0
   baseAttackRange: 2.2
   abilities:
   - {fileID: 11400000, guid: 78a26e0a386159c468fb4ad26178fd34, type: 2}
@@ -167,6 +168,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: c7c859a80d5d1514ba52891ff2773968, type: 3}
+  m_Resource: {fileID: 8300000, guid: c7c859a80d5d1514ba52891ff2773968, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.1
   m_Pitch: 1
