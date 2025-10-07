@@ -10,41 +10,33 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c1cdd5fc33fd8b841b7c7cd7dff9b881, type: 3}
-  m_Name: Set Armor
+  m_Name: Set Armor 1
   m_EditorClassIdentifier: 
   itemName: Set Armor
   itemDescription: 'Provides protection from attacks.
 
     Set bonus applies.'
   itemTag: Set
-  itemFlavourText: Dignified armor made for soldiers.
+  itemFlavourText: A weathered robe that can almost shield from the rain.
   classRequirement: Necromancer
-  itemIcon: {fileID: 21300000, guid: 76b26963dc7ef1e4582f483efb033d3a, type: 3}
+  itemIcon: {fileID: 21300000, guid: b84e21efadb21054fb9c6e44cf3f0a27, type: 3}
   itemType: 3
-  itemRarity: 1
+  itemRarity: 0
   itemCost: 0
-  randomStatCount: 2
+  randomStatCount: 1
   guaranteedStats:
   - stat: 1
-    minimum: 0.1
-    maximum: 0.15
-    isPercent: 1
-  - stat: 6
-    minimum: -0.05
-    maximum: -0.1
-    isPercent: 1
+    minimum: 4
+    maximum: 6
+    isPercent: 0
   randomisableStats:
   - stat: 4
-    minimum: 20
-    maximum: 25
+    minimum: 2
+    maximum: 2
     isPercent: 0
-  - stat: 1
-    minimum: 15
-    maximum: 20
-    isPercent: 0
-  - stat: 4
-    minimum: 0.1
-    maximum: 0.1
+  - stat: 6
+    minimum: -0.02
+    maximum: -0.04
     isPercent: 1
   minimumDropLevel: 0
   canPurchaseInShop: 1
@@ -53,17 +45,17 @@ MonoBehaviour:
   engine:
     scripts:
     - scriptName: Item Equipped
-      scriptUID: 849908597
+      scriptUID: 1334320171
       hasWait: 0
       eventNodes:
-      - rid: 3315308049510432862
+      - rid: 3315308049510432858
       conditionNodes: []
       actionNodes: []
     - scriptName: Item Unequipped
-      scriptUID: 779741871
+      scriptUID: 2073881131
       hasWait: 0
       eventNodes:
-      - rid: 3315308049510432863
+      - rid: 3315308049510432859
       conditionNodes: []
       actionNodes: []
   references:
@@ -71,7 +63,7 @@ MonoBehaviour:
     RefIds:
     - rid: -2
       type: {class: , ns: , asm: }
-    - rid: 3315308049510432862
+    - rid: 3315308049510432858
       type: {class: EventNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 2
@@ -92,7 +84,7 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         presets: []
-    - rid: 3315308049510432863
+    - rid: 3315308049510432859
       type: {class: EventNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 2

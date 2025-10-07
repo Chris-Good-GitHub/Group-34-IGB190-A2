@@ -10,42 +10,47 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c1cdd5fc33fd8b841b7c7cd7dff9b881, type: 3}
-  m_Name: Set Armor
+  m_Name: Set Amulet 2
   m_EditorClassIdentifier: 
-  itemName: Set Armor
-  itemDescription: 'Provides protection from attacks.
+  itemName: Set Amulet
+  itemDescription: 'Provides beneficial reduction to abilities.
 
     Set bonus applies.'
   itemTag: Set
-  itemFlavourText: Dignified armor made for soldiers.
+  itemFlavourText: An amulet so ancient it is said to have seen the birth of this
+    world.
   classRequirement: Necromancer
-  itemIcon: {fileID: 21300000, guid: 76b26963dc7ef1e4582f483efb033d3a, type: 3}
-  itemType: 3
-  itemRarity: 1
+  itemIcon: {fileID: 21300000, guid: 08c2d143d95dbe24db432d837091ab5a, type: 3}
+  itemType: 1
+  itemRarity: 2
   itemCost: 0
   randomStatCount: 2
   guaranteedStats:
-  - stat: 1
-    minimum: 0.1
-    maximum: 0.15
+  - stat: 7
+    minimum: 0.2
+    maximum: 0.3
     isPercent: 1
-  - stat: 6
-    minimum: -0.05
-    maximum: -0.1
+  - stat: 8
+    minimum: 0.2
+    maximum: 0.3
     isPercent: 1
   randomisableStats:
-  - stat: 4
-    minimum: 20
-    maximum: 25
-    isPercent: 0
-  - stat: 1
-    minimum: 15
-    maximum: 20
-    isPercent: 0
-  - stat: 4
-    minimum: 0.1
-    maximum: 0.1
+  - stat: 0
+    minimum: 0.2
+    maximum: 0.5
     isPercent: 1
+  - stat: 6
+    minimum: 0.2
+    maximum: 0.3
+    isPercent: 1
+  - stat: 10
+    minimum: 0.12
+    maximum: 0.12
+    isPercent: 0
+  - stat: 11
+    minimum: 0.06
+    maximum: 0.06
+    isPercent: 0
   minimumDropLevel: 0
   canPurchaseInShop: 1
   canDropOffMonster: 1
@@ -53,17 +58,17 @@ MonoBehaviour:
   engine:
     scripts:
     - scriptName: Item Equipped
-      scriptUID: 849908597
+      scriptUID: 1192193300
       hasWait: 0
       eventNodes:
-      - rid: 3315308049510432862
+      - rid: 3315308049510432854
       conditionNodes: []
       actionNodes: []
     - scriptName: Item Unequipped
-      scriptUID: 779741871
+      scriptUID: 2111389504
       hasWait: 0
       eventNodes:
-      - rid: 3315308049510432863
+      - rid: 3315308049510432855
       conditionNodes: []
       actionNodes: []
   references:
@@ -71,7 +76,7 @@ MonoBehaviour:
     RefIds:
     - rid: -2
       type: {class: , ns: , asm: }
-    - rid: 3315308049510432862
+    - rid: 3315308049510432854
       type: {class: EventNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 2
@@ -92,7 +97,7 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         presets: []
-    - rid: 3315308049510432863
+    - rid: 3315308049510432855
       type: {class: EventNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 2
