@@ -19,13 +19,13 @@ MonoBehaviour:
   abilityIcon: {fileID: 21300000, guid: ebaef5902556fef44b513ae4e893d599, type: 3}
   targetMode: 4
   abilityDescription: 
-  abilityAnimation: Soul Mark
+  abilityAnimation: None
   range: 999
   castTime: 0
-  abilityCooldown: 0.1
+  abilityCooldown: 0.001
   abilityCost: 0
   movementLock: 1
-  animationActivationPosition: 0.5
+  animationActivationPosition: 0.075
   canMoveWhileCasting: 0
   hasSpecificCastTime: 0
   cooldownIsAtackSpeed: 0

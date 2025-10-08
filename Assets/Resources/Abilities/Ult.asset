@@ -26,8 +26,8 @@ MonoBehaviour:
   abilityCost: 0
   movementLock: 1
   animationActivationPosition: 0.5
-  canMoveWhileCasting: 1
-  hasSpecificCastTime: 0
+  canMoveWhileCasting: 0
+  hasSpecificCastTime: 1
   cooldownIsAtackSpeed: 0
   abilityGeneratesResource: 0
   requiresLineOfSight: 0
@@ -51,19 +51,20 @@ MonoBehaviour:
           scriptUID: 500675366
           hasWait: 0
           eventNodes:
-          - rid: 5926301772953419981
+          - rid: 5926301845992243200
           conditionNodes: []
-          actionNodes: []
-    - rid: 5926301772953419981
+          actionNodes:
+          - rid: 5926301883335705057
+    - rid: 5926301845992243200
       type: {class: EventNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 2
         tempName: 
-        functionName: WhenUnitFinishesCastingThisAbility
-        functionDescription: Ability/When a unit finishes casting this ability
-        functionDynamicDescription: 'When a unit finishes casting this ability (Presets:
-          <color=yellow>Casting Unit</color>, <color=yellow>Ability Target Location</color>,
-          <color=yellow>Target Unit</color>)'
+        functionName: WhenUnitIsKilled
+        functionDescription: Unit/Unit is killed
+        functionDynamicDescription: 'When a unit is killed (Presets: <color=yellow>Killed
+          Unit</color>, <color=yellow>Killing Unit</color>, <color=yellow>Killing
+          Ability</color>, <color=yellow>Is Critical</color>)'
         functionEvaluators: []
         parentNode:
           rid: -2
@@ -77,6 +78,95 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         presets:
-        - Casting Unit
-        - Ability Target Location
-        - Target Unit
+        - Killed Unit
+        - Killing Unit
+        - Killing Ability
+        - Is Critical
+    - rid: 5926301883335705057
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: SetUnitVariable
+        functionDescription: Variables/Set Unit Variable
+        functionDynamicDescription: Set script unit variable named $ to $
+        functionEvaluators:
+        - rid: 5926301883335705058
+        - rid: 5926301883335705059
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: Variable
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 5926301883335705058
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Variable Name
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 5926301883335705057
+        parentNodeID: 0
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 0
+        allowFunction: 0
+        value: ChangePlayer
+        options: []
+    - rid: 5926301883335705059
+      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: Unit
+        functionName: GetUnitVariable
+        functionDescription: Unit Variable
+        functionDynamicDescription: 'Unit: $'
+        functionEvaluators:
+        - rid: 5926301883335705125
+        parentNode:
+          rid: 5926301883335705057
+        parentNodeID: 1
+        indent: 0
+        presetName: Player
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 0
+        allowPreset: 1
+        allowFunction: 1
+        value: {fileID: 0}
+    - rid: 5926301883335705125
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Variable Name
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: False
+        options: []
