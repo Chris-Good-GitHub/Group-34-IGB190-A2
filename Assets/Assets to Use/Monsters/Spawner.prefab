@@ -108,6 +108,7 @@ MonoBehaviour:
   baseCriticalStrikeDamage: 2
   baseHealthRegen: 0
   baseResourceRegen: 0
+  marked: 0
   baseAttackRange: 2.2
   abilities:
   - {fileID: 11400000, guid: a39d42e88a196084f979c0593f8a8433, type: 2}
@@ -120,7 +121,7 @@ MonoBehaviour:
   faction: 1
   spawnEffect: {fileID: 0}
   goldModifier: 1
-  experienceModifier: 1
+  experienceModifier: 25
   corpseDuration: 0
   monsterLabel: 
   isEmpowered: 0
