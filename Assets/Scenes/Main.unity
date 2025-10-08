@@ -4082,11 +4082,14 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 197410848}
   m_CullTransparentMesh: 1
+<<<<<<< Updated upstream
 --- !u!4 &202630159 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7867617303319128509, guid: 4ade946976a81824b93a2175d95303b9, type: 3}
   m_PrefabInstance: {fileID: 1841912582}
   m_PrefabAsset: {fileID: 0}
+=======
+>>>>>>> Stashed changes
 --- !u!1 &203421802
 GameObject:
   m_ObjectHideFlags: 0
@@ -9488,7 +9491,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4176489301195308, guid: c6295e3ac14276d44a00c6e1c7860934, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.01
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4176489301195308, guid: c6295e3ac14276d44a00c6e1c7860934, type: 3}
       propertyPath: m_LocalRotation.w
@@ -12402,6 +12405,7 @@ MonoBehaviour:
   experienceToNextLevel: 100
   leftClickAbility: {fileID: 0}
   rightClickAlsoMoves: 0
+  playerAvatar: {fileID: 0}
   levelUpFeedback: {fileID: 11400000, guid: 9cdaa1d98fc0cc4428a905e670a76812, type: 2}
   resourceName: Mana
   resourceMaterial: {fileID: 2100000, guid: dd6dc55119cde6f4ab2a8561e505a971, type: 2}
@@ -19528,6 +19532,7 @@ MonoBehaviour:
   experienceToNextLevel: 100
   leftClickAbility: {fileID: 0}
   rightClickAlsoMoves: 1
+  playerAvatar: {fileID: 0}
   levelUpFeedback: {fileID: 11400000, guid: 9cdaa1d98fc0cc4428a905e670a76812, type: 2}
   resourceName: Rage
   resourceMaterial: {fileID: 2100000, guid: b8286c3806406a74eaa1c5a1ac724e39, type: 2}
@@ -23187,6 +23192,7 @@ MonoBehaviour:
   experienceToNextLevel: 100
   leftClickAbility: {fileID: 0}
   rightClickAlsoMoves: 0
+  playerAvatar: {fileID: 0}
   levelUpFeedback: {fileID: 11400000, guid: 9cdaa1d98fc0cc4428a905e670a76812, type: 2}
   resourceName: ResourceJuice
   resourceMaterial: {fileID: 2100000, guid: dd6dc55119cde6f4ab2a8561e505a971, type: 2}
@@ -35550,8 +35556,8 @@ MonoBehaviour:
   marked: 0
   baseAttackRange: 2
   abilities:
-  - {fileID: 11400000, guid: 1669e6fb6a9074c42a3e9160a2b8c5e1, type: 2}
-  - {fileID: 11400000, guid: 439a83325212fdd46bf8dc30aca6abfa, type: 2}
+  - {fileID: 11400000, guid: aebbbd079cfea5742a8c9c5fc75f27cc, type: 2}
+  - {fileID: 11400000, guid: d7a2a3607c219424980b76452feaafd5, type: 2}
   - {fileID: 11400000, guid: a535cae6a337b274190d9ad82d544fb1, type: 2}
   - {fileID: 11400000, guid: ff60bb7af69a5a24791ca9f3b9180510, type: 2}
   - {fileID: 11400000, guid: 20229b3f04ee08f4e85d1bd28b71790f, type: 2}
@@ -35569,6 +35575,7 @@ MonoBehaviour:
   experienceToNextLevel: 100
   leftClickAbility: {fileID: 0}
   rightClickAlsoMoves: 0
+  playerAvatar: {fileID: 0}
   levelUpFeedback: {fileID: 11400000, guid: 9cdaa1d98fc0cc4428a905e670a76812, type: 2}
   resourceName: ResourceJuice
   resourceMaterial: {fileID: 2100000, guid: dd6dc55119cde6f4ab2a8561e505a971, type: 2}
@@ -36853,6 +36860,7 @@ MonoBehaviour:
   experienceToNextLevel: 100
   leftClickAbility: {fileID: 0}
   rightClickAlsoMoves: 0
+  playerAvatar: {fileID: 0}
   levelUpFeedback: {fileID: 11400000, guid: 9cdaa1d98fc0cc4428a905e670a76812, type: 2}
   resourceName: Energy
   resourceMaterial: {fileID: 2100000, guid: 53e6d10c83e73f74a984d384a27c13d4, type: 2}
@@ -42747,7 +42755,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6824146607278163517, guid: c91f01bdf6a65764cbbe7ff23c04ee0d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3
+      value: -4.12
       objectReference: {fileID: 0}
     - target: {fileID: 6824146607278163517, guid: c91f01bdf6a65764cbbe7ff23c04ee0d, type: 3}
       propertyPath: m_LocalRotation.w
