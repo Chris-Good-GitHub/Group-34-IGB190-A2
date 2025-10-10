@@ -5,34 +5,31 @@ public class ChangePlayer : MonoBehaviour
 
     //true is necromance false is skeleton
     bool PlayerCharacter = true;
+    [SerializeField] int PlayerChange = 0;
 
     [SerializeField] GameObject necromancer;
     [SerializeField] GameObject skeleton;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
     void Update()
     {
+        Change();
     }
 
     public void Change()
     {
-        if (PlayerCharacter)
+        switch (PlayerChange)
         {
-            skeleton.transform.position = necromancer.transform.position;
-            necromancer.SetActive(true);
-            skeleton.SetActive(false);
-        }
-        else
-        {
-            necromancer.transform.position = skeleton.transform.position;
-            necromancer.SetActive(false);
-            skeleton.SetActive(true);
+            case 0:
+                skeleton.transform.position = necromancer.transform.position;
+                necromancer.SetActive(true);
+                skeleton.SetActive(false);
+                break;
+
+            case 1:
+                necromancer.transform.position = skeleton.transform.position;
+                necromancer.SetActive(false);
+                skeleton.SetActive(true);
+                break;
         }
     }
 }

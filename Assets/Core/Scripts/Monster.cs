@@ -19,6 +19,7 @@ public class Monster : Unit
     public UnitSpawnEffect spawnEffect;
 
     [Header("Monster Properties")]
+    public bool notMarked = true;
     public float goldModifier = 1.0f;
     public float experienceModifier = 1.0f;
     public float corpseDuration = 5.0f;

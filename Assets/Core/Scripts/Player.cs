@@ -18,9 +18,7 @@ public class Player : Unit
     [DoNotSerialize] public Inventory inventory;
     [DoNotSerialize] public Inventory equipment;
     [DoNotSerialize] public Inventory sellSlot;
-    [DoNotSerialize] public bool SetBonus = false;
-    [DoNotSerialize] public bool SetBonus2 = false;
-    [DoNotSerialize] public bool SetBonus3 = false;
+    [DoNotSerialize] public int SetBonus = 0;
 
     public Avatar playerAvatar;
 
@@ -482,6 +480,10 @@ public class Player : Unit
     /// </summary>
     public void OnItemEquipped(Item item)
     {
+        if (item.GetTag() == "Set")
+        {
+            SetBonus += 1;
+        }
         GameManager.events.OnItemEquipped.Invoke(item);
         GameManager.logicEngine.AddEngine(item.engine);
         foreach (Item.RolledStatValue rolledStatValue in item.rolledStatValues)
@@ -507,6 +509,10 @@ public class Player : Unit
         GameManager.events.OnItemUnequipped.Invoke(item);
         stats.RemoveBuffWithLabel(item.GetInstanceID().ToString());
         GameManager.logicEngine.RemoveEngine(item.engine);
+        if (item.GetTag() == "Set")
+        {
+            SetBonus -= 1;
+        }
     }
 
     /// <summary>

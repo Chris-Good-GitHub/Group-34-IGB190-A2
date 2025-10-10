@@ -138,8 +138,8 @@ MonoBehaviour:
         functionDescription: Unit/Unit Has Buff
         functionDynamicDescription: $ has buff labeled $
         functionEvaluators:
-        - rid: 5926301883335704867
-        - rid: 5926301883335704868
+        - rid: 5926301931623416545
+        - rid: 5926301931623416546
         parentNode:
           rid: 5926301883335704712
         parentNodeID: 0
@@ -152,10 +152,10 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         value: 0
-    - rid: 5926301883335704867
+    - rid: 5926301931623416545
       type: {class: UnitNode, ns: , asm: Assembly-CSharp}
       data:
-        returnType: 3
+        returnType: 4
         tempName: Unit
         functionName: 
         functionDescription: 
@@ -165,7 +165,7 @@ MonoBehaviour:
           rid: -2
         parentNodeID: -1
         indent: 0
-        presetName: 
+        presetName: Target Unit
         variableName: 
         stringSuffix: 
         nodeIcon: 
@@ -173,10 +173,10 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         value: {fileID: 0}
-    - rid: 5926301883335704868
+    - rid: 5926301931623416546
       type: {class: StringNode, ns: , asm: Assembly-CSharp}
       data:
-        returnType: 3
+        returnType: 0
         tempName: Buff Name
         functionName: 
         functionDescription: 
@@ -193,8 +193,117 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 
+        value: Notmarked
         options: []
+    - rid: 5926301931623416547
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: RemoveBuff
+        functionDescription: Unit/Remove Buff
+        functionDynamicDescription: Remove buff named $ from $
+        functionEvaluators:
+        - rid: 5926301931623416548
+        - rid: 5926301931623416549
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 1
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: Unit
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 5926301931623416548
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 5926301931623416547
+        parentNodeID: 0
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 0
+        allowFunction: 0
+        value: Notmarked
+        options: []
+    - rid: 5926301931623416549
+      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 4
+        tempName: Unit
+        functionName: ClosestUnitToPoint
+        functionDescription: Distance/Closest Unit Near Point
+        functionDynamicDescription: Closest unit within $ distance of $
+        functionEvaluators:
+        - rid: 5926301931623416564
+        - rid: 5926301931623416565
+        parentNode:
+          rid: 5926301931623416547
+        parentNodeID: 1
+        indent: 0
+        presetName: Target Unit
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 0
+        allowPreset: 1
+        allowFunction: 1
+        value: {fileID: 0}
+    - rid: 5926301931623416564
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 3
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: m
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 0
+    - rid: 5926301931623416565
+      type: {class: VectorNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 3
+        tempName: Location
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: {x: 0, y: 0, z: 0}
     - rid: 8442517955232137216
       type: {class: LogicEngine, ns: , asm: Assembly-CSharp}
       data:
@@ -211,6 +320,7 @@ MonoBehaviour:
           - rid: 8442517955232137256
           - rid: 5926301883335704712
           - rid: 5926301772953419848
+          - rid: 5926301931623416547
           - rid: 8442517955232137322
         - scriptName: Unit Collision
           scriptUID: 2140851297
