@@ -9521,7 +9521,11 @@ PrefabInstance:
     - target: {fileID: 95894034666125936, guid: c6295e3ac14276d44a00c6e1c7860934, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: 117a7c707833bec4fa49792fed542cce, type: 2}
+      objectReference: {fileID: 9100000, guid: 7fc484527f7352a49a5990317e5de029, type: 2}
+    - target: {fileID: 95894034666125936, guid: c6295e3ac14276d44a00c6e1c7860934, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12403,6 +12407,11 @@ MonoBehaviour:
   leftClickAbility: {fileID: 0}
   rightClickAlsoMoves: 0
   SetBonus: 0
+<<<<<<< Updated upstream
+=======
+  SetBonus2: 0
+  SetBonus3: 0
+>>>>>>> Stashed changes
   playerAvatar: {fileID: 0}
   levelUpFeedback: {fileID: 11400000, guid: 9cdaa1d98fc0cc4428a905e670a76812, type: 2}
   resourceName: Mana
@@ -19531,6 +19540,11 @@ MonoBehaviour:
   leftClickAbility: {fileID: 0}
   rightClickAlsoMoves: 1
   SetBonus: 0
+<<<<<<< Updated upstream
+=======
+  SetBonus2: 0
+  SetBonus3: 0
+>>>>>>> Stashed changes
   playerAvatar: {fileID: 0}
   levelUpFeedback: {fileID: 11400000, guid: 9cdaa1d98fc0cc4428a905e670a76812, type: 2}
   resourceName: Rage
@@ -23192,6 +23206,11 @@ MonoBehaviour:
   leftClickAbility: {fileID: 0}
   rightClickAlsoMoves: 0
   SetBonus: 0
+<<<<<<< Updated upstream
+=======
+  SetBonus2: 0
+  SetBonus3: 0
+>>>>>>> Stashed changes
   playerAvatar: {fileID: 0}
   levelUpFeedback: {fileID: 11400000, guid: 9cdaa1d98fc0cc4428a905e670a76812, type: 2}
   resourceName: ResourceJuice
@@ -35623,6 +35642,11 @@ MonoBehaviour:
   leftClickAbility: {fileID: 0}
   rightClickAlsoMoves: 0
   SetBonus: 0
+<<<<<<< Updated upstream
+=======
+  SetBonus2: 0
+  SetBonus3: 0
+>>>>>>> Stashed changes
   playerAvatar: {fileID: 0}
   levelUpFeedback: {fileID: 11400000, guid: 9cdaa1d98fc0cc4428a905e670a76812, type: 2}
   resourceName: ResourceJuice
@@ -36909,6 +36933,11 @@ MonoBehaviour:
   leftClickAbility: {fileID: 0}
   rightClickAlsoMoves: 0
   SetBonus: 0
+<<<<<<< Updated upstream
+=======
+  SetBonus2: 0
+  SetBonus3: 0
+>>>>>>> Stashed changes
   playerAvatar: {fileID: 0}
   levelUpFeedback: {fileID: 11400000, guid: 9cdaa1d98fc0cc4428a905e670a76812, type: 2}
   resourceName: Energy
