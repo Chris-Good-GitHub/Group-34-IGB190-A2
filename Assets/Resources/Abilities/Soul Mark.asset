@@ -20,19 +20,19 @@ MonoBehaviour:
   targetMode: 4
   abilityDescription: Fire magic towards the target location, dealing 100% attack
     damage and marking the enemies hit.
-  abilityAnimation: One Hand Slash
+  abilityAnimation: Soul Mark
   range: 8
-  castTime: 1.14
+  castTime: 1
   abilityCooldown: 0
   abilityCost: 0
   movementLock: 1
   animationActivationPosition: 0.5
   canMoveWhileCasting: 0
-  hasSpecificCastTime: 0
+  hasSpecificCastTime: 1
   cooldownIsAtackSpeed: 1
   abilityGeneratesResource: 0
   requiresLineOfSight: 1
-  canUpdateTargetWhileCasting: 0
+  canUpdateTargetWhileCasting: 1
   castAtClosestPointInRange: 1
   castCompleteSound: {fileID: 8300000, guid: 1eb7cbaf61d23a64bbd36c0a38b5cb0c, type: 3}
   castCompleteSoundVolume: 0.3
@@ -44,7 +44,6 @@ MonoBehaviour:
     RefIds:
     - rid: -2
       type: {class: , ns: , asm: }
-<<<<<<< Updated upstream
     - rid: 5926301772953419848
       type: {class: ActionNode, ns: , asm: Assembly-CSharp}
       data:
@@ -305,8 +304,6 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         value: {x: 0, y: 0, z: 0}
-=======
->>>>>>> Stashed changes
     - rid: 8442517955232137216
       type: {class: LogicEngine, ns: , asm: Assembly-CSharp}
       data:
@@ -321,12 +318,9 @@ MonoBehaviour:
           - rid: 8442517955232137218
           - rid: 8442517955232137252
           - rid: 8442517955232137256
-<<<<<<< Updated upstream
           - rid: 5926301883335704712
           - rid: 5926301772953419848
           - rid: 5926301931623416547
-=======
->>>>>>> Stashed changes
           - rid: 8442517955232137322
         - scriptName: Unit Collision
           scriptUID: 2140851297
