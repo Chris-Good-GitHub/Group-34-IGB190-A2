@@ -51,19 +51,20 @@ MonoBehaviour:
           scriptUID: 500675366
           hasWait: 0
           eventNodes:
-          - rid: 5926301845992243200
+          - rid: 5926301976696717392
           conditionNodes: []
-          actionNodes: []
-    - rid: 5926301845992243200
+          actionNodes:
+          - rid: 5926301976696717405
+    - rid: 5926301976696717392
       type: {class: EventNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 2
         tempName: 
-        functionName: WhenUnitIsKilled
-        functionDescription: Unit/Unit is killed
-        functionDynamicDescription: 'When a unit is killed (Presets: <color=yellow>Killed
-          Unit</color>, <color=yellow>Killing Unit</color>, <color=yellow>Killing
-          Ability</color>, <color=yellow>Is Critical</color>)'
+        functionName: WhenUnitFinishesCastingThisAbility
+        functionDescription: Ability/When a unit finishes casting this ability
+        functionDynamicDescription: 'When a unit finishes casting this ability (Presets:
+          <color=yellow>Casting Unit</color>, <color=yellow>Ability Target Location</color>,
+          <color=yellow>Target Unit</color>)'
         functionEvaluators: []
         parentNode:
           rid: -2
@@ -77,7 +78,71 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         presets:
-        - Killed Unit
-        - Killing Unit
-        - Killing Ability
-        - Is Critical
+        - Casting Unit
+        - Ability Target Location
+        - Target Unit
+    - rid: 5926301976696717405
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: ModifyNumberVariable
+        functionDescription: Global Variables/Modify Global Number Variable
+        functionDynamicDescription: Modify global number variable named $ by $
+        functionEvaluators:
+        - rid: 5926301976696717406
+        - rid: 5926301976696717407
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: Variable
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 5926301976696717406
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Variable Name
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 5926301976696717405
+        parentNodeID: 0
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 0
+        allowFunction: 0
+        value: PlayerChange
+        options: []
+    - rid: 5926301976696717407
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 5926301976696717405
+        parentNodeID: 1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 1

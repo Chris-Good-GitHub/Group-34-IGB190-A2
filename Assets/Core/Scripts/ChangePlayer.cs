@@ -5,14 +5,15 @@ public class ChangePlayer : MonoBehaviour
 
     //true is necromance false is skeleton
     bool PlayerCharacter = true;
-    [SerializeField] int PlayerChange = 0;
-
+    [SerializeField] public int PlayerChange = 0;
+    Vector3 NecromancerPosition;
+    Vector3 SkeletonPosition;
     [SerializeField] GameObject necromancer;
     [SerializeField] GameObject skeleton;
 
     void Update()
     {
-        Change();
+        
     }
 
     public void Change()
