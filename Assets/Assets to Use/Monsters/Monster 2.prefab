@@ -100,7 +100,7 @@ MonoBehaviour:
   resource: 0
   baseDamage: 3
   baseAttacksPerSecond: 0.6
-  baseMaxHealth: 200
+  baseMaxHealth: 70
   baseMaxResource: 100
   baseMovementSpeed: 1
   baseArmor: 0
@@ -120,6 +120,7 @@ MonoBehaviour:
   isDead: 0
   faction: 1
   spawnEffect: {fileID: 4062287519753572544, guid: 332ddaa5f7738b142ac986212c018770, type: 3}
+  notMarked: 1
   goldModifier: 1
   experienceModifier: 15
   corpseDuration: 5

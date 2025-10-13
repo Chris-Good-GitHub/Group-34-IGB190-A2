@@ -4176,7 +4176,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6719909186588814121, guid: 393daf3e1b3ab6049be1159d7997235f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 12.34
+      value: 12.5
       objectReference: {fileID: 0}
     - target: {fileID: 6719909186588814121, guid: 393daf3e1b3ab6049be1159d7997235f, type: 3}
       propertyPath: m_LocalPosition.y
@@ -23240,7 +23240,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1295994506866832662, guid: 558e7799d998f4649aae2a5b8054f9cb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 12.38
+      value: 12.499999
       objectReference: {fileID: 0}
     - target: {fileID: 1295994506866832662, guid: 558e7799d998f4649aae2a5b8054f9cb, type: 3}
       propertyPath: m_LocalPosition.y
@@ -31896,7 +31896,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1295994506866832662, guid: 558e7799d998f4649aae2a5b8054f9cb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 12.38
+      value: 12.499999
       objectReference: {fileID: 0}
     - target: {fileID: 1295994506866832662, guid: 558e7799d998f4649aae2a5b8054f9cb, type: 3}
       propertyPath: m_LocalPosition.y
@@ -31904,7 +31904,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1295994506866832662, guid: 558e7799d998f4649aae2a5b8054f9cb, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -5.02
+      value: -4.9999995
       objectReference: {fileID: 0}
     - target: {fileID: 1295994506866832662, guid: 558e7799d998f4649aae2a5b8054f9cb, type: 3}
       propertyPath: m_LocalRotation.w
@@ -35595,15 +35595,15 @@ MonoBehaviour:
   unitName: Necromancer
   health: 100
   resource: 0
-  baseDamage: 10
-  baseAttacksPerSecond: 100
+  baseDamage: 30
+  baseAttacksPerSecond: 1
   baseMaxHealth: 100
   baseMaxResource: 100
   baseMovementSpeed: 3
   baseArmor: 100
-  baseCriticalStrikeChance: 0.2
+  baseCriticalStrikeChance: 0.1
   baseCriticalStrikeDamage: 2
-  baseHealthRegen: 0
+  baseHealthRegen: 5
   baseResourceRegen: 0
   marked: 0
   baseAttackRange: 2
@@ -35634,13 +35634,13 @@ MonoBehaviour:
   resourceMaterial: {fileID: 2100000, guid: dd6dc55119cde6f4ab2a8561e505a971, type: 2}
   bonusDamagePerLevel: 3
   bonusHealthPerLevel: 5
-  bonusMovementSpeedPerLevel: 1
+  bonusMovementSpeedPerLevel: 0.05
   bonusResourcePerLevel: 5
   bonusArmorPerLevel: 2
-  bonusCriticalChancePerLevel: 1
-  bonusCriticalDamagePerLevel: 4
-  bonusHealthRegenPerLevel: 2
-  bonusResourceRegenPerLevel: 2
+  bonusCriticalChancePerLevel: 0.02
+  bonusCriticalDamagePerLevel: 0.05
+  bonusHealthRegenPerLevel: 1
+  bonusResourceRegenPerLevel: 1
 --- !u!4 &1725328249
 Transform:
   m_ObjectHideFlags: 0
