@@ -54,7 +54,7 @@ MonoBehaviour:
           - rid: 5926301976696717392
           conditionNodes: []
           actionNodes:
-          - rid: 5926301976696717405
+          - rid: 5926302042878640133
     - rid: 5926301976696717392
       type: {class: EventNode, ns: , asm: Assembly-CSharp}
       data:
@@ -81,17 +81,17 @@ MonoBehaviour:
         - Casting Unit
         - Ability Target Location
         - Target Unit
-    - rid: 5926301976696717405
+    - rid: 5926302042878640133
       type: {class: ActionNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 2
         tempName: 
-        functionName: ModifyNumberVariable
-        functionDescription: Global Variables/Modify Global Number Variable
-        functionDynamicDescription: Modify global number variable named $ by $
+        functionName: SetGlobalNumberVariable
+        functionDescription: Global Variables/Set Global Number Variable
+        functionDynamicDescription: Set global number variable named $ to $
         functionEvaluators:
-        - rid: 5926301976696717406
-        - rid: 5926301976696717407
+        - rid: 5926302042878640134
+        - rid: 5926302042878640135
         parentNode:
           rid: -2
         parentNodeID: -1
@@ -103,7 +103,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-    - rid: 5926301976696717406
+    - rid: 5926302042878640134
       type: {class: StringNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 0
@@ -113,7 +113,7 @@ MonoBehaviour:
         functionDynamicDescription: 
         functionEvaluators: []
         parentNode:
-          rid: 5926301976696717405
+          rid: 5926302042878640133
         parentNodeID: 0
         indent: 0
         presetName: 
@@ -125,7 +125,7 @@ MonoBehaviour:
         allowFunction: 0
         value: PlayerChange
         options: []
-    - rid: 5926301976696717407
+    - rid: 5926302042878640135
       type: {class: NumberNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 0
@@ -135,7 +135,7 @@ MonoBehaviour:
         functionDynamicDescription: 
         functionEvaluators: []
         parentNode:
-          rid: 5926301976696717405
+          rid: 5926302042878640133
         parentNodeID: 1
         indent: 0
         presetName: 

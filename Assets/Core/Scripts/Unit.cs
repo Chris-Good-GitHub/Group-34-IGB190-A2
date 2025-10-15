@@ -83,7 +83,7 @@ public class Unit : Interactable
     /// <summary>
     /// Perform all initial setup.
     /// </summary>
-    protected virtual void Start()
+    protected virtual void OnEnable()
     {
         CacheComponents();
         SetupStats();

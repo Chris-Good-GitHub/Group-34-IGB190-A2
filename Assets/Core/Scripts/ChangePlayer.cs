@@ -1,36 +1,64 @@
+using Unity.VisualScripting;
+using UnityEditor;
 using UnityEngine;
 
 public class ChangePlayer : MonoBehaviour
 {
 
-    //true is necromance false is skeleton
-    bool PlayerCharacter = true;
-    [SerializeField] public int PlayerChange = 0;
-    Vector3 NecromancerPosition;
-    Vector3 SkeletonPosition;
-    [SerializeField] GameObject necromancer;
-    [SerializeField] GameObject skeleton;
+    //Even is necromance Odd is skeleton
+    public int PlayerChange = 0;
+    [SerializeField] Player necromaner;
+    [SerializeField] Player skeleton;
+    [SerializeField] Object currentPlayer;
 
+    [SerializeField] GameObject necromancerPreFab;
+    [SerializeField] GameObject skeletonPreFab;
+
+
+    void Start()
+    {
+        Change();
+    }
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            PlayerChange++;
+            
+            if (CheckTransform())
+            {
+                Change();
+            }
+
+        }
+        if (PlayerChange%2 ==0)
+        {
+            //targetPosition = necromancer.transform.position;
+        } else
+        {
+            //targetPosition = skeleton.transform.position;
+        }
+       
     }
 
     public void Change()
     {
-        switch (PlayerChange)
+        switch (PlayerChange%2)
         {
             case 0:
-                skeleton.transform.position = necromancer.transform.position;
-                necromancer.SetActive(true);
-                skeleton.SetActive(false);
+                necromancerPreFab.SetActive(true);
+                skeletonPreFab.SetActive(false);
                 break;
 
             case 1:
-                necromancer.transform.position = skeleton.transform.position;
-                necromancer.SetActive(false);
-                skeleton.SetActive(true);
+                necromancerPreFab.SetActive(false);
+                skeletonPreFab.SetActive(true);
                 break;
         }
+    }
+
+    public bool CheckTransform()
+    {
+        return true;
     }
 }
