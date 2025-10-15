@@ -22,13 +22,13 @@ MonoBehaviour:
   abilityAnimation: Bow Shoot
   range: 8
   castTime: 0.1
-  abilityCooldown: 10
+  abilityCooldown: 0
   abilityCost: 0
   movementLock: 1
   animationActivationPosition: 0.5
   canMoveWhileCasting: 0
   hasSpecificCastTime: 0
-  cooldownIsAtackSpeed: 0
+  cooldownIsAtackSpeed: 1
   abilityGeneratesResource: 0
   requiresLineOfSight: 1
   canUpdateTargetWhileCasting: 1
@@ -240,7 +240,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 0
         allowFunction: 0
-        value: Greater Than or Equal To
+        value: Equal To
         options:
         - Equal To
         - Not Equal To
@@ -487,92 +487,6 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         value: {fileID: 0}
-    - rid: 5926302041896910924
-      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: 
-        functionName: ColorFlash
-        functionDescription: Feedback/Flash Color on Unit
-        functionDynamicDescription: Flash $ on $ for $
-        functionEvaluators:
-        - rid: 5926302041896910925
-        - rid: 5926302041896910926
-        - rid: 5926302041896910927
-        parentNode:
-          rid: -2
-        parentNodeID: -1
-        indent: 1
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: Audio
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-    - rid: 5926302041896910925
-      type: {class: ColorNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: Color
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        parentNode:
-          rid: 5926302041896910924
-        parentNodeID: 0
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: {r: 0, g: 0, b: 1, a: 1}
-    - rid: 5926302041896910926
-      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 4
-        tempName: Unit
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        parentNode:
-          rid: 5926302041896910924
-        parentNodeID: 1
-        indent: 0
-        presetName: Player
-        variableName: 
-        stringSuffix: 
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: {fileID: 243147159722867909, guid: 374d47c23bdc7f5469a02d3129649e86, type: 3}
-    - rid: 5926302041896910927
-      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: 
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        parentNode:
-          rid: 5926302041896910924
-        parentNodeID: 2
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: s
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: 5
     - rid: 8442518003074990097
       type: {class: LogicEngine, ns: , asm: Assembly-CSharp}
       data:
@@ -586,7 +500,6 @@ MonoBehaviour:
           - rid: 5926301883335704649
           actionNodes:
           - rid: 5926301931623416263
-          - rid: 5926302041896910924
           - rid: 5926301883335704969
           - rid: 8442518272303169611
     - rid: 8442518003074990098

@@ -57,9 +57,9 @@ public class Monster : Unit
     /// <summary>
     /// Performs all initial monster setup.
     /// </summary>
-    protected override void OnEnable()
+    protected override void Start()
     {
-        base.OnEnable();
+        base.Start();
         CacheComponents();
         CalculateTargetRange();
         ApplyMonsterScaling();

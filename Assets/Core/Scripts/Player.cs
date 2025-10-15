@@ -9,8 +9,6 @@ using UnityEngine;
 public class Player : Unit
 {
     bool changePlayer = true;
-
-    public int PlayerChangeTest = 0;    
     [HideInInspector] public float currentGold = 1000000;
     [HideInInspector] public int currentLevel = 1;
     [HideInInspector] public float currentExperience = 0;
@@ -59,9 +57,9 @@ public class Player : Unit
     /// <summary>
     /// Perform initial setup.
     /// </summary>
-    protected override void OnEnable()
+    protected override void Start()
     {
-        base.OnEnable();
+        base.Start();
         SetOutline(OUTLINE_COLOR);
         CacheLeftClickAbility();
         UpdateExperienceRequiredForLevel();
