@@ -63,8 +63,8 @@ MonoBehaviour:
           - rid: 5926301772953419966
           conditionNodes: []
           actionNodes:
-          - rid: 5926301772953419967
           - rid: 5926301772953419978
+          - rid: 5926301772953419967
     - rid: 5926301772953419906
       type: {class: EventNode, ns: , asm: Assembly-CSharp}
       data:

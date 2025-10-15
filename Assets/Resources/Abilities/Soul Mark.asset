@@ -144,8 +144,8 @@ MonoBehaviour:
         functionDescription: Unit/Unit Has Buff
         functionDynamicDescription: $ has buff labeled $
         functionEvaluators:
-        - rid: 2921985435401715804
-        - rid: 2921985435401715805
+        - rid: 2921985476044259342
+        - rid: 2921985476044259343
         parentNode:
           rid: 2921985435401715796
         parentNodeID: 0
@@ -192,7 +192,7 @@ MonoBehaviour:
           rid: 2921985435401715797
         parentNodeID: 1
         indent: 0
-        presetName: Target Unit
+        presetName: Colliding Unit
         variableName: 
         stringSuffix: 
         nodeIcon: 
@@ -245,49 +245,6 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         value: {fileID: 0}
-    - rid: 2921985435401715804
-      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 4
-        tempName: Unit
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        parentNode:
-          rid: 2921985435401715799
-        parentNodeID: 0
-        indent: 0
-        presetName: Colliding Unit
-        variableName: 
-        stringSuffix: 
-        nodeIcon: 
-        allowValue: 0
-        allowPreset: 1
-        allowFunction: 1
-        value: {fileID: 0}
-    - rid: 2921985435401715805
-      type: {class: StringNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: Buff Name
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        parentNode:
-          rid: 2921985435401715799
-        parentNodeID: 1
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: Notmarked
-        options: []
     - rid: 2921985435401715806
       type: {class: NumberNode, ns: , asm: Assembly-CSharp}
       data:
@@ -330,6 +287,114 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         value: {x: 0, y: 0, z: 0}
+    - rid: 2921985476044259342
+      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 4
+        tempName: Unit
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: Colliding Unit
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 0
+        allowPreset: 1
+        allowFunction: 1
+        value: {fileID: 0}
+    - rid: 2921985476044259343
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Buff Name
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: Marked
+        options: []
+    - rid: 2921985476044259344
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: SetBoolVariable
+        functionDescription: Variables/Set Bool Variable
+        functionDynamicDescription: Set script bool variable named $ to $
+        functionEvaluators:
+        - rid: 2921985476044259345
+        - rid: 2921985476044259346
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: Variable
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 2921985476044259345
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Variable Name
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 2921985476044259344
+        parentNodeID: 0
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 0
+        allowFunction: 0
+        value: Marked
+        options: []
+    - rid: 2921985476044259346
+      type: {class: BoolNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Bool
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 2921985476044259344
+        parentNodeID: 1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 1
     - rid: 8442517955232137216
       type: {class: LogicEngine, ns: , asm: Assembly-CSharp}
       data:
@@ -356,6 +421,7 @@ MonoBehaviour:
           - rid: 2921985435401715796
           - rid: 2921985435401715797
           - rid: 2921985435401715798
+          - rid: 2921985476044259344
         - scriptName: Terrain Collision
           scriptUID: 877343950
           hasWait: 0

@@ -23,7 +23,7 @@ public class Unit : Interactable
     [SerializeField] protected float baseCriticalStrikeDamage = 2.0f;
     [SerializeField] protected float baseHealthRegen = 0.0f;
     [SerializeField] protected float baseResourceRegen = 0.0f;
-    [SerializeField] protected bool marked = false;
+    [SerializeField] public bool marked = false;
     public float baseAttackRange = 2.0f;
     
     
