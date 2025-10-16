@@ -3,33 +3,41 @@ using UnityEngine;
 public class ChangePlayer : MonoBehaviour
 {
 
-    //true is necromance false is skeleton
-    bool PlayerCharacter = true;
-    [SerializeField] public int PlayerChange = 0;
-    Vector3 NecromancerPosition;
-    Vector3 SkeletonPosition;
-    [SerializeField] GameObject necromancer;
-    [SerializeField] GameObject skeleton;
+    //even is necromance odd is skeleton
+    [SerializeField] public float change;
+    [SerializeField] Player currentPlayer;
+    [SerializeField] Player necromaner;
+    [SerializeField] Player skeleton;
+    [SerializeField] GameObject necromancerPreFab;
+    [SerializeField] GameObject skeletonPreFab;
 
     void Update()
     {
-        
+        change = LogicEngine.GetGlobalVariable<float>("PlayerChange");
+        Change();
+    }
+
+    void Start()
+    {
+        LogicEngine.SetGlobalVariable("PlayerChange", 0.0f);
+        change = LogicEngine.GetGlobalVariable<float>("PlayerChange");
+        //Debug.Log(LogicEngine.GetGlobalVariable<float>("PlayerChange"));
     }
 
     public void Change()
     {
-        switch (PlayerChange)
+        switch (change%2)
         {
             case 0:
-                skeleton.transform.position = necromancer.transform.position;
-                necromancer.SetActive(true);
-                skeleton.SetActive(false);
+                //currentPlayer.abilities = necromaner.abilities;
+                necromancerPreFab.SetActive(true);
+                skeletonPreFab.SetActive(false);
                 break;
 
             case 1:
-                necromancer.transform.position = skeleton.transform.position;
-                necromancer.SetActive(false);
-                skeleton.SetActive(true);
+                //currentPlayer.abilities = skeleton.abilities;
+                necromancerPreFab.SetActive(false);
+                skeletonPreFab.SetActive(true);
                 break;
         }
     }

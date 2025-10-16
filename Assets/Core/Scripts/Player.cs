@@ -8,7 +8,6 @@ using UnityEngine;
 
 public class Player : Unit
 {
-    bool changePlayer = true;
     [HideInInspector] public float currentGold = 1000000;
     [HideInInspector] public int currentLevel = 1;
     [HideInInspector] public float currentExperience = 0;
@@ -19,8 +18,6 @@ public class Player : Unit
     [DoNotSerialize] public Inventory equipment;
     [DoNotSerialize] public Inventory sellSlot;
     [DoNotSerialize] public int SetBonus = 0;
-
-    public Avatar playerAvatar;
 
     public GameFeedback levelUpFeedback;
     public string resourceName = "Resource";

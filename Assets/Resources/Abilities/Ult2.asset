@@ -10,27 +10,27 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3ba5be5e9a4ad5d49a4183e2e4440724, type: 3}
-  m_Name: Ult
+  m_Name: Ult2
   m_EditorClassIdentifier: 
   engine:
-    rid: 5926301772953419980
-  abilityName: Ult
+    rid: 5926302051766108789
+  abilityName: Ult2
   abilityFlavourText: 
   abilityIcon: {fileID: 21300000, guid: 5e21898b38b93b040bcea9429e8b4188, type: 3}
   targetMode: 0
-  abilityDescription: Draw power and transform
-  abilityAnimation: Shout
+  abilityDescription: Drink your healing potion, Instantly restores 100 health.
+  abilityAnimation: None
   range: 999
   castTime: 0
   abilityCooldown: 10
   abilityCost: 0
   movementLock: 1
   animationActivationPosition: 0.5
-  canMoveWhileCasting: 0
+  canMoveWhileCasting: 1
   hasSpecificCastTime: 1
   cooldownIsAtackSpeed: 0
   abilityGeneratesResource: 0
-  requiresLineOfSight: 0
+  requiresLineOfSight: 1
   canUpdateTargetWhileCasting: 1
   castAtClosestPointInRange: 0
   castCompleteSound: {fileID: 0}
@@ -43,19 +43,19 @@ MonoBehaviour:
     RefIds:
     - rid: -2
       type: {class: , ns: , asm: }
-    - rid: 5926301772953419980
+    - rid: 5926302051766108789
       type: {class: LogicEngine, ns: , asm: Assembly-CSharp}
       data:
         scripts:
         - scriptName: Cast Completed
-          scriptUID: 500675366
+          scriptUID: 1325524897
           hasWait: 0
           eventNodes:
-          - rid: 5926301976696717392
+          - rid: 5926302051766108790
           conditionNodes: []
           actionNodes:
-          - rid: 5926302052716118024
-    - rid: 5926301976696717392
+          - rid: 5926302051766108791
+    - rid: 5926302051766108790
       type: {class: EventNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 2
@@ -81,17 +81,17 @@ MonoBehaviour:
         - Casting Unit
         - Ability Target Location
         - Target Unit
-    - rid: 5926302052716118024
+    - rid: 5926302051766108791
       type: {class: ActionNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 2
         tempName: 
-        functionName: SetGlobalNumberVariable
-        functionDescription: Global Variables/Set Global Number Variable
-        functionDynamicDescription: Set global number variable named $ to $
+        functionName: ModifyNumberVariable
+        functionDescription: Global Variables/Modify Global Number Variable
+        functionDynamicDescription: Modify global number variable named $ by $
         functionEvaluators:
-        - rid: 5926302052716118025
-        - rid: 5926302052716118026
+        - rid: 5926302051766108792
+        - rid: 5926302051766108793
         parentNode:
           rid: -2
         parentNodeID: -1
@@ -103,7 +103,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-    - rid: 5926302052716118025
+    - rid: 5926302051766108792
       type: {class: StringNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 0
@@ -113,7 +113,7 @@ MonoBehaviour:
         functionDynamicDescription: 
         functionEvaluators: []
         parentNode:
-          rid: 5926302052716118024
+          rid: 5926302051766108791
         parentNodeID: 0
         indent: 0
         presetName: 
@@ -125,19 +125,17 @@ MonoBehaviour:
         allowFunction: 0
         value: PlayerChange
         options: []
-    - rid: 5926302052716118026
+    - rid: 5926302051766108793
       type: {class: NumberNode, ns: , asm: Assembly-CSharp}
       data:
-        returnType: 2
+        returnType: 0
         tempName: 
-        functionName: Addition
-        functionDescription: Math/Addition
-        functionDynamicDescription: $ + $
-        functionEvaluators:
-        - rid: 5926302052716118065
-        - rid: 5926302052716118066
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
         parentNode:
-          rid: 5926302052716118024
+          rid: 5926302051766108791
         parentNodeID: 1
         indent: 0
         presetName: 
@@ -147,69 +145,4 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 0
-    - rid: 5926302052716118065
-      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: 
-        functionName: GetGlobalNumberVariable
-        functionDescription: Global Number Variable
-        functionDynamicDescription: 'Global Number: $'
-        functionEvaluators:
-        - rid: 5926302052716118076
-        parentNode:
-          rid: -2
-        parentNodeID: -1
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: 0
-    - rid: 5926302052716118066
-      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: 
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        parentNode:
-          rid: -2
-        parentNodeID: -1
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
         value: 1
-    - rid: 5926302052716118076
-      type: {class: StringNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: 
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        parentNode:
-          rid: -2
-        parentNodeID: -1
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 0
-        allowFunction: 0
-        value: PlayerChange
-        options: []
