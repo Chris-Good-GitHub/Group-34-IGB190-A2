@@ -10,36 +10,35 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 76ef298ccb713614cb4f11ef9d2c39cd, type: 3}
-  m_Name: BasicQuest
+  m_Name: Tutorial
   m_EditorClassIdentifier: 
   engine:
     scripts:
-    - scriptName: Main
-      scriptUID: 603612389
+    - scriptName: Game Start
+      scriptUID: 204596095
       hasWait: 0
       eventNodes:
-      - rid: 8442517638129647687
+      - rid: 5926302094179172352
       conditionNodes: []
       actionNodes:
-      - rid: 8442517638129647688
-      - rid: 8442517638129647690
-      - rid: 8442517638129647699
-    - scriptName: PlayerAtLocation
-      scriptUID: 383354713
+      - rid: 5926302094179172353
+      - rid: 5926302094179172356
+      - rid: 5926302094179172358
+    - scriptName: Reach Point
+      scriptUID: 1358017308
       hasWait: 0
       eventNodes:
-      - rid: 8442517638129647694
+      - rid: 5926302094179172361
       conditionNodes: []
       actionNodes:
-      - rid: 8442517638129647696
-      - rid: 8442517638129647702
-      - rid: 8442517638129647704
+      - rid: 5926302094179172363
+      - rid: 5926302094179172365
   references:
     version: 2
     RefIds:
     - rid: -2
       type: {class: , ns: , asm: }
-    - rid: 8442517638129647687
+    - rid: 5926302094179172352
       type: {class: EventNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 2
@@ -60,16 +59,17 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         presets: []
-    - rid: 8442517638129647688
+    - rid: 5926302094179172353
       type: {class: ActionNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 2
         tempName: 
-        functionName: CreateQuest2
-        functionDescription: Quests/Create Quest
-        functionDynamicDescription: Give the player a quest named $
+        functionName: ShowTutorialMessage
+        functionDescription: UI Actions/Show Tutorial Message
+        functionDynamicDescription: Show a tutorial message printing $ for $ seconds
         functionEvaluators:
-        - rid: 8442517638129647689
+        - rid: 5926302094179172354
+        - rid: 5926302094179172355
         parentNode:
           rid: -2
         parentNodeID: -1
@@ -77,21 +77,21 @@ MonoBehaviour:
         presetName: 
         variableName: 
         stringSuffix: 
-        nodeIcon: QuestNew
+        nodeIcon: UI
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-    - rid: 8442517638129647689
+    - rid: 5926302094179172354
       type: {class: StringNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 0
-        tempName: Quest Name
+        tempName: 
         functionName: 
         functionDescription: 
         functionDynamicDescription: 
         functionEvaluators: []
         parentNode:
-          rid: 8442517638129647688
+          rid: 5926302094179172353
         parentNodeID: 0
         indent: 0
         presetName: 
@@ -101,76 +101,9 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: Move Forward
+        value: To gain more power you must explore further
         options: []
-    - rid: 8442517638129647690
-      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: 
-        functionName: AddQuestRequirement2
-        functionDescription: Quests/Add Quest Requirement
-        functionDynamicDescription: Add $ requirement to $ with $ progress increments
-        functionEvaluators:
-        - rid: 8442517638129647691
-        - rid: 8442517638129647692
-        - rid: 8442517638129647693
-        parentNode:
-          rid: -2
-        parentNodeID: -1
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: QuestNew
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-    - rid: 8442517638129647691
-      type: {class: StringNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: Requirement
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        parentNode:
-          rid: 8442517638129647690
-        parentNodeID: 0
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: Move to glowing area
-        options: []
-    - rid: 8442517638129647692
-      type: {class: StringNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: Quest Name
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        parentNode:
-          rid: 8442517638129647690
-        parentNodeID: 1
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: Move Forward
-        options: []
-    - rid: 8442517638129647693
+    - rid: 5926302094179172355
       type: {class: NumberNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 0
@@ -180,8 +113,8 @@ MonoBehaviour:
         functionDynamicDescription: 
         functionEvaluators: []
         parentNode:
-          rid: 8442517638129647690
-        parentNodeID: 2
+          rid: 5926302094179172353
+        parentNodeID: 1
         indent: 0
         presetName: 
         variableName: 
@@ -190,8 +123,115 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 1
-    - rid: 8442517638129647694
+        value: 6
+    - rid: 5926302094179172356
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: Wait
+        functionDescription: Flow/Wait
+        functionDynamicDescription: Wait for $ second(s)
+        functionEvaluators:
+        - rid: 5926302094179172357
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: Timer
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 5926302094179172357
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 5926302094179172356
+        parentNodeID: 0
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 6
+    - rid: 5926302094179172358
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: ShowTutorialMessage
+        functionDescription: UI Actions/Show Tutorial Message
+        functionDynamicDescription: Show a tutorial message printing $ for $ seconds
+        functionEvaluators:
+        - rid: 5926302094179172359
+        - rid: 5926302094179172360
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: UI
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 5926302094179172359
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 5926302094179172358
+        parentNodeID: 0
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: Hold left click to move. Move to the glowing circle in the room
+        options: []
+    - rid: 5926302094179172360
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 5926302094179172358
+        parentNodeID: 1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 9999
+    - rid: 5926302094179172361
       type: {class: EventNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 2
@@ -200,7 +240,7 @@ MonoBehaviour:
         functionDescription: Region/Unit enters region
         functionDynamicDescription: Unit enters region named $
         functionEvaluators:
-        - rid: 8442517638129647695
+        - rid: 5926302094179172362
         parentNode:
           rid: -2
         parentNodeID: -1
@@ -213,7 +253,7 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         presets: []
-    - rid: 8442517638129647695
+    - rid: 5926302094179172362
       type: {class: StringNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 0
@@ -223,7 +263,7 @@ MonoBehaviour:
         functionDynamicDescription: 
         functionEvaluators: []
         parentNode:
-          rid: 8442517638129647694
+          rid: 5926302094179172361
         parentNodeID: 0
         indent: 0
         presetName: 
@@ -235,180 +275,7 @@ MonoBehaviour:
         allowFunction: 1
         value: GlowingArea
         options: []
-    - rid: 8442517638129647696
-      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: 
-        functionName: SetQuestRequirementProgress2
-        functionDescription: Quests/Set Quest Progress
-        functionDynamicDescription: Set quest progress of $ to $
-        functionEvaluators:
-        - rid: 8442517638129647697
-        - rid: 8442517638129647698
-        parentNode:
-          rid: -2
-        parentNodeID: -1
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: QuestNew
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-    - rid: 8442517638129647697
-      type: {class: StringNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: Quest Name
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        parentNode:
-          rid: 8442517638129647696
-        parentNodeID: 0
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: Move Forward
-        options: []
-    - rid: 8442517638129647698
-      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: 
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        parentNode:
-          rid: 8442517638129647696
-        parentNodeID: 1
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: 1
-    - rid: 8442517638129647699
-      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: 
-        functionName: AddQuestReward2
-        functionDescription: Quests/Add Quest Reward
-        functionDynamicDescription: Add reward labeled $ to quest $
-        functionEvaluators:
-        - rid: 8442517638129647700
-        - rid: 8442517638129647701
-        parentNode:
-          rid: -2
-        parentNodeID: -1
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: QuestNew
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-    - rid: 8442517638129647700
-      type: {class: StringNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: Reward
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        parentNode:
-          rid: 8442517638129647699
-        parentNodeID: 0
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: 500 Gold
-        options: []
-    - rid: 8442517638129647701
-      type: {class: StringNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: Quest Name
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        parentNode:
-          rid: 8442517638129647699
-        parentNodeID: 1
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: Move Forward
-        options: []
-    - rid: 8442517638129647702
-      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: 
-        functionName: AddGold
-        functionDescription: Player/Add Gold
-        functionDynamicDescription: Add $ gold to the player
-        functionEvaluators:
-        - rid: 8442517638129647703
-        parentNode:
-          rid: -2
-        parentNodeID: -1
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: Unit
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-    - rid: 8442517638129647703
-      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: 
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        parentNode:
-          rid: 8442517638129647702
-        parentNodeID: 0
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: 500
-    - rid: 8442517638129647704
+    - rid: 5926302094179172363
       type: {class: ActionNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 2
@@ -417,7 +284,7 @@ MonoBehaviour:
         functionDescription: Region/Destroy Region
         functionDynamicDescription: Destroy regions named $
         functionEvaluators:
-        - rid: 8442517638129647705
+        - rid: 5926302094179172364
         parentNode:
           rid: -2
         parentNodeID: -1
@@ -429,7 +296,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-    - rid: 8442517638129647705
+    - rid: 5926302094179172364
       type: {class: StringNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 0
@@ -439,7 +306,7 @@ MonoBehaviour:
         functionDynamicDescription: 
         functionEvaluators: []
         parentNode:
-          rid: 8442517638129647704
+          rid: 5926302094179172363
         parentNodeID: 0
         indent: 0
         presetName: 
@@ -451,3 +318,68 @@ MonoBehaviour:
         allowFunction: 1
         value: GlowingArea
         options: []
+    - rid: 5926302094179172365
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: ShowTutorialMessage
+        functionDescription: UI Actions/Show Tutorial Message
+        functionDynamicDescription: Show a tutorial message printing $ for $ seconds
+        functionEvaluators:
+        - rid: 5926302094179172366
+        - rid: 5926302094179172367
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: UI
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 5926302094179172366
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 5926302094179172365
+        parentNodeID: 0
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: Well Done! Explore further...
+        options: []
+    - rid: 5926302094179172367
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 5926302094179172365
+        parentNodeID: 1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 6
