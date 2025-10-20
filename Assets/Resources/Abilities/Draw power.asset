@@ -64,7 +64,6 @@ MonoBehaviour:
           eventNodes:
           - rid: 3315308168104902936
           conditionNodes:
-          - rid: 3315308168104902934
           - rid: 3315308168104902937
           actionNodes:
           - rid: 3315308168104902941
@@ -227,7 +226,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 10
+        value: 5
     - rid: 3315308168104902823
       type: {class: ActionNode, ns: , asm: Assembly-CSharp}
       data:
@@ -270,7 +269,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 20
+        value: 120
     - rid: 3315308168104902825
       type: {class: UnitGroupNode, ns: , asm: Assembly-CSharp}
       data:
@@ -313,7 +312,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 10
+        value: 5
     - rid: 3315308168104902858
       type: {class: UnitNode, ns: , asm: Assembly-CSharp}
       data:
@@ -502,49 +501,6 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         value: 1
-    - rid: 3315308168104902934
-      type: {class: BoolNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: 
-        functionName: UnitIsCasting
-        functionDescription: Unit/Unit Is Casting
-        functionDynamicDescription: $ is casting
-        functionEvaluators:
-        - rid: 3315308168104902935
-        parentNode:
-          rid: -2
-        parentNodeID: -1
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: Condition
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: 0
-    - rid: 3315308168104902935
-      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 4
-        tempName: Unit
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        parentNode:
-          rid: 3315308168104902934
-        parentNodeID: 0
-        indent: 0
-        presetName: Player
-        variableName: 
-        stringSuffix: 
-        nodeIcon: 
-        allowValue: 0
-        allowPreset: 1
-        allowFunction: 1
-        value: {fileID: 0}
     - rid: 3315308168104902936
       type: {class: EventNode, ns: , asm: Assembly-CSharp}
       data:
@@ -609,7 +565,7 @@ MonoBehaviour:
           rid: 3315308168104902937
         parentNodeID: 0
         indent: 0
-        presetName: Killing Unit
+        presetName: Killed Unit
         variableName: 
         stringSuffix: 
         nodeIcon: 
@@ -637,7 +593,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 0
         allowFunction: 0
-        value: Equal To
+        value: Not Equal To
         options:
         - Equal To
         - Not Equal To

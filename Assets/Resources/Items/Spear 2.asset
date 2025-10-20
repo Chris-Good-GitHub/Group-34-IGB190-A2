@@ -45,7 +45,7 @@ MonoBehaviour:
     maximum: 0.04
     isPercent: 0
   minimumDropLevel: 0
-  canPurchaseInShop: 1
+  canPurchaseInShop: 0
   canDropOffMonster: 1
   template: {fileID: 0}
   engine:
