@@ -46,14 +46,16 @@ MonoBehaviour:
       eventNodes:
       - rid: 3315308049510433170
       conditionNodes: []
-      actionNodes: []
+      actionNodes:
+      - rid: 5926302188992201532
     - scriptName: Item Unequipped
       scriptUID: 870315779
       hasWait: 0
       eventNodes:
       - rid: 3315308049510433171
       conditionNodes: []
-      actionNodes: []
+      actionNodes:
+      - rid: 5926302188992201421
     - scriptName: Deal damage depending on gold
       scriptUID: 888781494
       hasWait: 0
@@ -336,3 +338,267 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         value: 20
+    - rid: 5926302188992201421
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: SetGlobalNumberVariable
+        functionDescription: Global Variables/Set Global Number Variable
+        functionDynamicDescription: Set global number variable named $ to $
+        functionEvaluators:
+        - rid: 5926302188992201422
+        - rid: 5926302188992201423
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: Variable
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 5926302188992201422
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Variable Name
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 5926302188992201421
+        parentNodeID: 0
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 0
+        allowFunction: 0
+        value: Set Bonus
+        options: []
+    - rid: 5926302188992201423
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: Subtraction
+        functionDescription: Math/Subtraction
+        functionDynamicDescription: $ - $
+        functionEvaluators:
+        - rid: 5926302188992201424
+        - rid: 5926302188992201425
+        parentNode:
+          rid: 5926302188992201421
+        parentNodeID: 1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 0
+    - rid: 5926302188992201424
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: GetGlobalNumberVariable
+        functionDescription: Global Number Variable
+        functionDynamicDescription: 'Global Number: $'
+        functionEvaluators:
+        - rid: 5926302188992201426
+        parentNode:
+          rid: 5926302188992201423
+        parentNodeID: 0
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 0
+    - rid: 5926302188992201425
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 5926302188992201423
+        parentNodeID: 1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 1
+    - rid: 5926302188992201426
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 5926302188992201424
+        parentNodeID: 0
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 0
+        allowFunction: 0
+        value: Set Bonus
+        options: []
+    - rid: 5926302188992201532
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: SetGlobalNumberVariable
+        functionDescription: Global Variables/Set Global Number Variable
+        functionDynamicDescription: Set global number variable named $ to $
+        functionEvaluators:
+        - rid: 5926302188992201533
+        - rid: 5926302188992201534
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: Variable
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 5926302188992201533
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Variable Name
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 5926302188992201532
+        parentNodeID: 0
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 0
+        allowFunction: 0
+        value: Set Bonus
+        options: []
+    - rid: 5926302188992201534
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: Addition
+        functionDescription: Math/Addition
+        functionDynamicDescription: $ + $
+        functionEvaluators:
+        - rid: 5926302188992201535
+        - rid: 5926302188992201536
+        parentNode:
+          rid: 5926302188992201532
+        parentNodeID: 1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 0
+    - rid: 5926302188992201535
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: GetGlobalNumberVariable
+        functionDescription: Global Number Variable
+        functionDynamicDescription: 'Global Number: $'
+        functionEvaluators:
+        - rid: 5926302188992201537
+        parentNode:
+          rid: 5926302188992201534
+        parentNodeID: 0
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 0
+    - rid: 5926302188992201536
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 5926302188992201534
+        parentNodeID: 1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 1
+    - rid: 5926302188992201537
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 5926302188992201535
+        parentNodeID: 0
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 0
+        allowFunction: 0
+        value: Set Bonus
+        options: []

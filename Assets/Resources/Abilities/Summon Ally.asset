@@ -400,6 +400,149 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         value: {x: 0, y: 0, z: 0}
+    - rid: 5926302188992200954
+      type: {class: EventNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: WhenUnitFinishesCastingThisAbility
+        functionDescription: Ability/When a unit finishes casting this ability
+        functionDynamicDescription: 'When a unit finishes casting this ability (Presets:
+          <color=yellow>Casting Unit</color>, <color=yellow>Ability Target Location</color>,
+          <color=yellow>Target Unit</color>)'
+        functionEvaluators: []
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: Event
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        presets:
+        - Casting Unit
+        - Ability Target Location
+        - Target Unit
+    - rid: 5926302188992200955
+      type: {class: BoolNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: NumberComparison
+        functionDescription: Comparisons/Number Comparison
+        functionDynamicDescription: $ $ $
+        functionEvaluators:
+        - rid: 5926302188992200956
+        - rid: 5926302188992200957
+        - rid: 5926302188992200958
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: Condition
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 0
+    - rid: 5926302188992200956
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: GetGlobalNumberVariable
+        functionDescription: Global Number Variable
+        functionDynamicDescription: 'Global Number: $'
+        functionEvaluators:
+        - rid: 5926302188992200976
+        parentNode:
+          rid: 5926302188992200955
+        parentNodeID: 0
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 0
+    - rid: 5926302188992200957
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 5926302188992200955
+        parentNodeID: 1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 0
+        allowFunction: 0
+        value: Equal To
+        options:
+        - Equal To
+        - Not Equal To
+        - Less Than
+        - Less Than or Equal To
+        - Greater Than
+        - Greater Than or Equal To
+    - rid: 5926302188992200958
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 5926302188992200955
+        parentNodeID: 2
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 5
+    - rid: 5926302188992200976
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 0
+        allowFunction: 0
+        value: Set Bonus
+        options: []
     - rid: 8442518003074990097
       type: {class: LogicEngine, ns: , asm: Assembly-CSharp}
       data:
@@ -415,6 +558,14 @@ MonoBehaviour:
           - rid: 5926301931623416263
           - rid: 5926301883335704969
           - rid: 8442518272303169611
+        - scriptName: Set Bonus
+          scriptUID: 736333680
+          hasWait: 0
+          eventNodes:
+          - rid: 5926302188992200954
+          conditionNodes:
+          - rid: 5926302188992200955
+          actionNodes: []
     - rid: 8442518003074990098
       type: {class: EventNode, ns: , asm: Assembly-CSharp}
       data:

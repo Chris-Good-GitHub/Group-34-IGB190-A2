@@ -633,11 +633,11 @@ MonoBehaviour:
       data:
         returnType: 2
         tempName: 
-        functionName: GetNumberVariable
-        functionDescription: Number Variable
-        functionDynamicDescription: 'Number: $'
+        functionName: GetGlobalNumberVariable
+        functionDescription: Global Number Variable
+        functionDynamicDescription: 'Global Number: $'
         functionEvaluators:
-        - rid: 5926302160477749382
+        - rid: 5926302188992200932
         parentNode:
           rid: 5926302004486865353
         parentNodeID: 0
@@ -1289,7 +1289,7 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         value: {fileID: 0}
-    - rid: 5926302160477749382
+    - rid: 5926302188992200932
       type: {class: StringNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 0
@@ -1299,8 +1299,8 @@ MonoBehaviour:
         functionDynamicDescription: 
         functionEvaluators: []
         parentNode:
-          rid: 5926302004486865354
-        parentNodeID: 0
+          rid: -2
+        parentNodeID: -1
         indent: 0
         presetName: 
         variableName: 
@@ -1309,7 +1309,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 0
         allowFunction: 0
-        value: SetBonus
+        value: Set Bonus
         options: []
     - rid: 8442517955232137491
       type: {class: LogicEngine, ns: , asm: Assembly-CSharp}

@@ -61,32 +61,17 @@ MonoBehaviour:
       hasWait: 0
       eventNodes:
       - rid: 3315308049510433222
-      conditionNodes:
-      - rid: 5926301883335705046
-      actionNodes: []
+      conditionNodes: []
+      actionNodes:
+      - rid: 5926302188992201209
     - scriptName: Item Unequipped
       scriptUID: 2048443402
       hasWait: 0
       eventNodes:
       - rid: 3315308049510433223
       conditionNodes: []
-      actionNodes: []
-    - scriptName: Set bonus 2
-      scriptUID: 68726821
-      hasWait: 0
-      eventNodes:
-      - rid: 5926301883335705048
-      conditionNodes:
-      - rid: 5926301883335705050
-      actionNodes: []
-    - scriptName: Set bonus 3
-      scriptUID: 919055176
-      hasWait: 0
-      eventNodes:
-      - rid: 5926301883335705049
-      conditionNodes:
-      - rid: 5926301883335705052
-      actionNodes: []
+      actionNodes:
+      - rid: 5926302188992201703
   references:
     version: 2
     RefIds:
@@ -134,16 +119,17 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         presets: []
-    - rid: 5926301883335705046
-      type: {class: BoolNode, ns: , asm: Assembly-CSharp}
+    - rid: 5926302188992201209
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 2
         tempName: 
-        functionName: GetBoolVariable
-        functionDescription: Bool Variable
-        functionDynamicDescription: 'Bool: $'
+        functionName: SetGlobalNumberVariable
+        functionDescription: Global Variables/Set Global Number Variable
+        functionDynamicDescription: Set global number variable named $ to $
         functionEvaluators:
-        - rid: 5926301883335705047
+        - rid: 5926302188992201210
+        - rid: 5926302188992201211
         parentNode:
           rid: -2
         parentNodeID: -1
@@ -151,12 +137,11 @@ MonoBehaviour:
         presetName: 
         variableName: 
         stringSuffix: 
-        nodeIcon: Condition
+        nodeIcon: Variable
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 0
-    - rid: 5926301883335705047
+    - rid: 5926302188992201210
       type: {class: StringNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 0
@@ -166,7 +151,7 @@ MonoBehaviour:
         functionDynamicDescription: 
         functionEvaluators: []
         parentNode:
-          rid: 5926301883335705046
+          rid: 5926302188992201209
         parentNodeID: 0
         indent: 0
         presetName: 
@@ -176,83 +161,85 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 0
         allowFunction: 0
-        value: SetBonus
+        value: Set Bonus
         options: []
-    - rid: 5926301883335705048
-      type: {class: EventNode, ns: , asm: Assembly-CSharp}
+    - rid: 5926302188992201211
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 2
         tempName: 
-        functionName: ScriptLoaded
-        functionDescription: Time/On script loaded
-        functionDynamicDescription: On script loaded
-        functionEvaluators: []
-        parentNode:
-          rid: -2
-        parentNodeID: -1
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: Timer
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        presets: []
-    - rid: 5926301883335705049
-      type: {class: EventNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: 
-        functionName: ScriptLoaded
-        functionDescription: Time/On script loaded
-        functionDynamicDescription: On script loaded
-        functionEvaluators: []
-        parentNode:
-          rid: -2
-        parentNodeID: -1
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: Timer
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        presets: []
-    - rid: 5926301883335705050
-      type: {class: BoolNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: 
-        functionName: GetBoolVariable
-        functionDescription: Bool Variable
-        functionDynamicDescription: 'Bool: $'
+        functionName: Addition
+        functionDescription: Math/Addition
+        functionDynamicDescription: $ + $
         functionEvaluators:
-        - rid: 5926301883335705051
+        - rid: 5926302188992201212
+        - rid: 5926302188992201213
         parentNode:
-          rid: -2
-        parentNodeID: -1
+          rid: 5926302188992201209
+        parentNodeID: 1
         indent: 0
         presetName: 
         variableName: 
         stringSuffix: 
-        nodeIcon: Condition
+        nodeIcon: 
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
         value: 0
-    - rid: 5926301883335705051
-      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+    - rid: 5926302188992201212
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: GetGlobalNumberVariable
+        functionDescription: Global Number Variable
+        functionDynamicDescription: 'Global Number: $'
+        functionEvaluators:
+        - rid: 5926302188992201214
+        parentNode:
+          rid: 5926302188992201211
+        parentNodeID: 0
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 0
+    - rid: 5926302188992201213
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 0
-        tempName: Variable Name
+        tempName: 
         functionName: 
         functionDescription: 
         functionDynamicDescription: 
         functionEvaluators: []
         parentNode:
-          rid: 5926301883335705050
+          rid: 5926302188992201211
+        parentNodeID: 1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 1
+    - rid: 5926302188992201214
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 5926302188992201212
         parentNodeID: 0
         indent: 0
         presetName: 
@@ -262,18 +249,19 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 0
         allowFunction: 0
-        value: SetBonus2
+        value: Set Bonus
         options: []
-    - rid: 5926301883335705052
-      type: {class: BoolNode, ns: , asm: Assembly-CSharp}
+    - rid: 5926302188992201703
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 2
         tempName: 
-        functionName: GetBoolVariable
-        functionDescription: Bool Variable
-        functionDynamicDescription: 'Bool: $'
+        functionName: SetGlobalNumberVariable
+        functionDescription: Global Variables/Set Global Number Variable
+        functionDynamicDescription: Set global number variable named $ to $
         functionEvaluators:
-        - rid: 5926301883335705053
+        - rid: 5926302188992201704
+        - rid: 5926302188992201705
         parentNode:
           rid: -2
         parentNodeID: -1
@@ -281,12 +269,11 @@ MonoBehaviour:
         presetName: 
         variableName: 
         stringSuffix: 
-        nodeIcon: Condition
+        nodeIcon: Variable
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 0
-    - rid: 5926301883335705053
+    - rid: 5926302188992201704
       type: {class: StringNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 0
@@ -296,7 +283,7 @@ MonoBehaviour:
         functionDynamicDescription: 
         functionEvaluators: []
         parentNode:
-          rid: 5926301883335705052
+          rid: 5926302188992201703
         parentNodeID: 0
         indent: 0
         presetName: 
@@ -306,5 +293,93 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 0
         allowFunction: 0
-        value: SetBonus3
+        value: Set Bonus
+        options: []
+    - rid: 5926302188992201705
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: Subtraction
+        functionDescription: Math/Subtraction
+        functionDynamicDescription: $ - $
+        functionEvaluators:
+        - rid: 5926302188992201706
+        - rid: 5926302188992201707
+        parentNode:
+          rid: 5926302188992201703
+        parentNodeID: 1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 0
+    - rid: 5926302188992201706
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: GetGlobalNumberVariable
+        functionDescription: Global Number Variable
+        functionDynamicDescription: 'Global Number: $'
+        functionEvaluators:
+        - rid: 5926302188992201708
+        parentNode:
+          rid: 5926302188992201705
+        parentNodeID: 0
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 0
+    - rid: 5926302188992201707
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 5926302188992201705
+        parentNodeID: 1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 1
+    - rid: 5926302188992201708
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 5926302188992201706
+        parentNodeID: 0
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 0
+        allowFunction: 0
+        value: Set Bonus
         options: []
