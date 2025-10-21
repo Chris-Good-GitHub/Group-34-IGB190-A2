@@ -22,7 +22,7 @@ MonoBehaviour:
   itemIcon: {fileID: 21300000, guid: 3c1882447cff9014bba6b1170800ac81, type: 3}
   itemType: 0
   itemRarity: 2
-  itemCost: 0
+  itemCost: 200
   randomStatCount: 3
   guaranteedStats:
   - stat: 10
@@ -54,7 +54,7 @@ MonoBehaviour:
     minimum: 0.5
     maximum: 1
     isPercent: 1
-  minimumDropLevel: 0
+  minimumDropLevel: 3
   canPurchaseInShop: 1
   canDropOffMonster: 1
   template: {fileID: 0}
