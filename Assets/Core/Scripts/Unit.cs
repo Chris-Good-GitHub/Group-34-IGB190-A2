@@ -130,6 +130,8 @@ public class Unit : Interactable
     protected override void Update()
     {
         base.Update();
+        if (animator == null || animator.gameObject.activeSelf == false)
+            animator = GetComponentInChildren<Animator>();
         if (GameManager.player.isDead) return;
         if (!(unitIsActive = IsUnitActive())) return;
         ApplyStatBuffs();

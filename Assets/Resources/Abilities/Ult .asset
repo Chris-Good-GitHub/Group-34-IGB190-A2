@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3ba5be5e9a4ad5d49a4183e2e4440724, type: 3}
-  m_Name: Ult
+  m_Name: 'Ult '
   m_EditorClassIdentifier: 
   engine:
-    rid: 5926301772953419980
-  abilityName: Ult
+    rid: 5926302200042881561
+  abilityName: 'Ult '
   abilityFlavourText: 
   abilityIcon: {fileID: 21300000, guid: 5e21898b38b93b040bcea9429e8b4188, type: 3}
   targetMode: 0
@@ -43,28 +43,28 @@ MonoBehaviour:
     RefIds:
     - rid: -2
       type: {class: , ns: , asm: }
-    - rid: 5926301772953419980
+    - rid: 5926302200042881561
       type: {class: LogicEngine, ns: , asm: Assembly-CSharp}
       data:
         scripts:
-        - scriptName: Necro to Skele
-          scriptUID: 500675366
+        - scriptName: Skele to Necro
+          scriptUID: 1786750545
           hasWait: 0
           eventNodes:
-          - rid: 5926301976696717392
+          - rid: 5926302200042881572
           conditionNodes:
-          - rid: 5926302200042881344
+          - rid: 5926302200042881573
           actionNodes:
-          - rid: 5926302200042881408
-          - rid: 5926302200042881234
-          - rid: 5926302200042881232
-          - rid: 5926302200042881212
-          - rid: 5926302200042881216
-          - rid: 5926302200042881220
-          - rid: 5926302200042881224
-          - rid: 5926302200042881646
-          - rid: 5926302052716118024
-    - rid: 5926301976696717392
+          - rid: 5926302200042881574
+          - rid: 5926302200042881575
+          - rid: 5926302200042881576
+          - rid: 5926302200042881577
+          - rid: 5926302200042881578
+          - rid: 5926302200042881579
+          - rid: 5926302200042881580
+          - rid: 5926302200042881642
+          - rid: 5926302200042881581
+    - rid: 5926302200042881572
       type: {class: EventNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 2
@@ -90,17 +90,18 @@ MonoBehaviour:
         - Casting Unit
         - Ability Target Location
         - Target Unit
-    - rid: 5926302052716118024
-      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+    - rid: 5926302200042881573
+      type: {class: BoolNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 2
         tempName: 
-        functionName: SetGlobalNumberVariable
-        functionDescription: Global Variables/Set Global Number Variable
-        functionDynamicDescription: Set global number variable named $ to $
+        functionName: NumberComparison
+        functionDescription: Comparisons/Number Comparison
+        functionDynamicDescription: $ $ $
         functionEvaluators:
-        - rid: 5926302052716118025
-        - rid: 5926302052716118026
+        - rid: 5926302200042881606
+        - rid: 5926302200042881607
+        - rid: 5926302200042881608
         parentNode:
           rid: -2
         parentNodeID: -1
@@ -108,442 +109,33 @@ MonoBehaviour:
         presetName: 
         variableName: 
         stringSuffix: 
-        nodeIcon: Variable
+        nodeIcon: Condition
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-    - rid: 5926302052716118025
-      type: {class: StringNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: Variable Name
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        parentNode:
-          rid: 5926302052716118024
-        parentNodeID: 0
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 0
-        allowFunction: 0
-        value: PlayerChange
-        options: []
-    - rid: 5926302052716118026
-      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: 
-        functionName: Addition
-        functionDescription: Math/Addition
-        functionDynamicDescription: $ + $
-        functionEvaluators:
-        - rid: 5926302200042881340
-        - rid: 5926302200042881341
-        parentNode:
-          rid: 5926302052716118024
-        parentNodeID: 1
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: 1
-    - rid: 5926302200042881212
-      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+        value: 0
+    - rid: 5926302200042881574
+      type: {class: NestingActionNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 2
         tempName: 
-        functionName: ReplaceAbilityOnUnit
-        functionDescription: Unit/Ability/Replace Ability
-        functionDynamicDescription: Replace $ with $ on $
+        functionName: DoActionsIfBool
+        functionDescription: Flow/If Statement
+        functionDynamicDescription: Do actions if $
         functionEvaluators:
-        - rid: 5926302200042881213
-        - rid: 5926302200042881214
-        - rid: 5926302200042881215
+        - rid: 5926302200042881609
         parentNode:
           rid: -2
         parentNodeID: -1
-        indent: 1
+        indent: 0
         presetName: 
         variableName: 
         stringSuffix: 
-        nodeIcon: Unit
+        nodeIcon: Condition
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-    - rid: 5926302200042881213
-      type: {class: AbilityNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: Ability
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        parentNode:
-          rid: 5926302200042881212
-        parentNodeID: 0
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 0
-        value: {fileID: 11400000, guid: d7a2a3607c219424980b76452feaafd5, type: 2}
-    - rid: 5926302200042881214
-      type: {class: AbilityNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: Ability
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        parentNode:
-          rid: 5926302200042881212
-        parentNodeID: 1
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 0
-        value: {fileID: 11400000, guid: cbbf2357a81cf204b8dadb4602904de0, type: 2}
-    - rid: 5926302200042881215
-      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 4
-        tempName: Unit
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        parentNode:
-          rid: 5926302200042881212
-        parentNodeID: 2
-        indent: 0
-        presetName: Player
-        variableName: 
-        stringSuffix: 
-        nodeIcon: 
-        allowValue: 0
-        allowPreset: 1
-        allowFunction: 1
-        value: {fileID: 0}
-    - rid: 5926302200042881216
-      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: 
-        functionName: ReplaceAbilityOnUnit
-        functionDescription: Unit/Ability/Replace Ability
-        functionDynamicDescription: Replace $ with $ on $
-        functionEvaluators:
-        - rid: 5926302200042881217
-        - rid: 5926302200042881218
-        - rid: 5926302200042881219
-        parentNode:
-          rid: -2
-        parentNodeID: -1
-        indent: 1
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: Unit
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-    - rid: 5926302200042881217
-      type: {class: AbilityNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: Ability
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        parentNode:
-          rid: 5926302200042881216
-        parentNodeID: 0
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 0
-        value: {fileID: 11400000, guid: a535cae6a337b274190d9ad82d544fb1, type: 2}
-    - rid: 5926302200042881218
-      type: {class: AbilityNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: Ability
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        parentNode:
-          rid: 5926302200042881216
-        parentNodeID: 1
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 0
-        value: {fileID: 11400000, guid: ad9121afb1c453b459632efdf32edf09, type: 2}
-    - rid: 5926302200042881219
-      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 4
-        tempName: Unit
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        parentNode:
-          rid: 5926302200042881216
-        parentNodeID: 2
-        indent: 0
-        presetName: Player
-        variableName: 
-        stringSuffix: 
-        nodeIcon: 
-        allowValue: 0
-        allowPreset: 1
-        allowFunction: 1
-        value: {fileID: 0}
-    - rid: 5926302200042881220
-      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: 
-        functionName: ReplaceAbilityOnUnit
-        functionDescription: Unit/Ability/Replace Ability
-        functionDynamicDescription: Replace $ with $ on $
-        functionEvaluators:
-        - rid: 5926302200042881221
-        - rid: 5926302200042881222
-        - rid: 5926302200042881223
-        parentNode:
-          rid: -2
-        parentNodeID: -1
-        indent: 1
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: Unit
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-    - rid: 5926302200042881221
-      type: {class: AbilityNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: Ability
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        parentNode:
-          rid: 5926302200042881220
-        parentNodeID: 0
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 0
-        value: {fileID: 11400000, guid: ff60bb7af69a5a24791ca9f3b9180510, type: 2}
-    - rid: 5926302200042881222
-      type: {class: AbilityNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: Ability
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        parentNode:
-          rid: 5926302200042881220
-        parentNodeID: 1
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 0
-        value: {fileID: 11400000, guid: 2c0d2df3b515c4d47aa500f8d2a596b8, type: 2}
-    - rid: 5926302200042881223
-      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 4
-        tempName: Unit
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        parentNode:
-          rid: 5926302200042881220
-        parentNodeID: 2
-        indent: 0
-        presetName: Player
-        variableName: 
-        stringSuffix: 
-        nodeIcon: 
-        allowValue: 0
-        allowPreset: 1
-        allowFunction: 1
-        value: {fileID: 0}
-    - rid: 5926302200042881224
-      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: 
-        functionName: ReplaceAbilityOnUnit
-        functionDescription: Unit/Ability/Replace Ability
-        functionDynamicDescription: Replace $ with $ on $
-        functionEvaluators:
-        - rid: 5926302200042881225
-        - rid: 5926302200042881226
-        - rid: 5926302200042881227
-        parentNode:
-          rid: -2
-        parentNodeID: -1
-        indent: 1
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: Unit
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-    - rid: 5926302200042881225
-      type: {class: AbilityNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: Ability
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        parentNode:
-          rid: 5926302200042881224
-        parentNodeID: 0
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 0
-        value: {fileID: 11400000, guid: 20229b3f04ee08f4e85d1bd28b71790f, type: 2}
-    - rid: 5926302200042881226
-      type: {class: AbilityNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: Ability
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        parentNode:
-          rid: 5926302200042881224
-        parentNodeID: 1
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 0
-        value: {fileID: 11400000, guid: 24b056a147b01e648a011277291f6ce2, type: 2}
-    - rid: 5926302200042881227
-      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 4
-        tempName: Unit
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        parentNode:
-          rid: 5926302200042881224
-        parentNodeID: 2
-        indent: 0
-        presetName: Player
-        variableName: 
-        stringSuffix: 
-        nodeIcon: 
-        allowValue: 0
-        allowPreset: 1
-        allowFunction: 1
-        value: {fileID: 0}
-    - rid: 5926302200042881232
-      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: 
-        functionName: ShakeScreen
-        functionDescription: Feedback/Shake Screen
-        functionDynamicDescription: Shake the screen with a strength of $
-        functionEvaluators:
-        - rid: 5926302200042881233
-        parentNode:
-          rid: -2
-        parentNodeID: -1
-        indent: 1
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: Audio
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-    - rid: 5926302200042881233
-      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: 
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        parentNode:
-          rid: 5926302200042881232
-        parentNodeID: 0
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: 1
-    - rid: 5926302200042881234
+    - rid: 5926302200042881575
       type: {class: ActionNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 2
@@ -552,11 +144,11 @@ MonoBehaviour:
         functionDescription: Feedback/Play Effect on Unit
         functionDynamicDescription: $ $ effect on $ for $ at $ scale
         functionEvaluators:
-        - rid: 5926302200042881235
-        - rid: 5926302200042881236
-        - rid: 5926302200042881237
-        - rid: 5926302200042881238
-        - rid: 5926302200042881239
+        - rid: 5926302200042881610
+        - rid: 5926302200042881611
+        - rid: 5926302200042881612
+        - rid: 5926302200042881613
+        - rid: 5926302200042881614
         parentNode:
           rid: -2
         parentNodeID: -1
@@ -568,7 +160,164 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-    - rid: 5926302200042881235
+    - rid: 5926302200042881576
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: ShakeScreen
+        functionDescription: Feedback/Shake Screen
+        functionDynamicDescription: Shake the screen with a strength of $
+        functionEvaluators:
+        - rid: 5926302200042881615
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 1
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: Audio
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 5926302200042881577
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: ReplaceAbilityOnUnit
+        functionDescription: Unit/Ability/Replace Ability
+        functionDynamicDescription: Replace $ with $ on $
+        functionEvaluators:
+        - rid: 5926302200042881616
+        - rid: 5926302200042881617
+        - rid: 5926302200042881618
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 1
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: Unit
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 5926302200042881578
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: ReplaceAbilityOnUnit
+        functionDescription: Unit/Ability/Replace Ability
+        functionDynamicDescription: Replace $ with $ on $
+        functionEvaluators:
+        - rid: 5926302200042881619
+        - rid: 5926302200042881620
+        - rid: 5926302200042881621
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 1
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: Unit
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 5926302200042881579
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: ReplaceAbilityOnUnit
+        functionDescription: Unit/Ability/Replace Ability
+        functionDynamicDescription: Replace $ with $ on $
+        functionEvaluators:
+        - rid: 5926302200042881622
+        - rid: 5926302200042881623
+        - rid: 5926302200042881624
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 1
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: Unit
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 5926302200042881580
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: ReplaceAbilityOnUnit
+        functionDescription: Unit/Ability/Replace Ability
+        functionDynamicDescription: Replace $ with $ on $
+        functionEvaluators:
+        - rid: 5926302200042881625
+        - rid: 5926302200042881626
+        - rid: 5926302200042881627
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 1
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: Unit
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 5926302200042881581
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: SetGlobalNumberVariable
+        functionDescription: Global Variables/Set Global Number Variable
+        functionDynamicDescription: Set global number variable named $ to $
+        functionEvaluators:
+        - rid: 5926302200042881628
+        - rid: 5926302200042881629
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: Variable
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 5926302200042881606
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: GetGlobalNumberVariable
+        functionDescription: Global Number Variable
+        functionDynamicDescription: 'Global Number: $'
+        functionEvaluators:
+        - rid: 5926302200042881636
+        parentNode:
+          rid: 5926302200042881573
+        parentNodeID: 0
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 0
+    - rid: 5926302200042881607
       type: {class: StringNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 0
@@ -578,7 +327,80 @@ MonoBehaviour:
         functionDynamicDescription: 
         functionEvaluators: []
         parentNode:
-          rid: 5926302200042881234
+          rid: 5926302200042881573
+        parentNodeID: 1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 0
+        allowFunction: 0
+        value: Equal To
+        options:
+        - Equal To
+        - Not Equal To
+        - Less Than
+        - Less Than or Equal To
+        - Greater Than
+        - Greater Than or Equal To
+    - rid: 5926302200042881608
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 5926302200042881573
+        parentNodeID: 2
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 1
+    - rid: 5926302200042881609
+      type: {class: BoolNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: Bool
+        functionName: NumberComparison
+        functionDescription: Comparisons/Number Comparison
+        functionDynamicDescription: $ $ $
+        functionEvaluators:
+        - rid: 5926302200042881637
+        - rid: 5926302200042881638
+        - rid: 5926302200042881639
+        parentNode:
+          rid: 5926302200042881574
+        parentNodeID: 0
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 0
+    - rid: 5926302200042881610
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 5926302200042881575
         parentNodeID: 0
         indent: 0
         presetName: 
@@ -593,7 +415,7 @@ MonoBehaviour:
         - Play
         - Stop
         - Play or Refresh
-    - rid: 5926302200042881236
+    - rid: 5926302200042881611
       type: {class: EffectNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 0
@@ -603,7 +425,7 @@ MonoBehaviour:
         functionDynamicDescription: 
         functionEvaluators: []
         parentNode:
-          rid: 5926302200042881234
+          rid: 5926302200042881575
         parentNodeID: 1
         indent: 0
         presetName: 
@@ -613,8 +435,8 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: {fileID: 2954705732812704554, guid: 09d6cea8fd338204486abdf0edcfa6ac, type: 3}
-    - rid: 5926302200042881237
+        value: {fileID: 2954705732812704554, guid: 81a3f35dfbeacef409c1301856f0db1e, type: 3}
+    - rid: 5926302200042881612
       type: {class: UnitNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 4
@@ -624,7 +446,7 @@ MonoBehaviour:
         functionDynamicDescription: 
         functionEvaluators: []
         parentNode:
-          rid: 5926302200042881234
+          rid: 5926302200042881575
         parentNodeID: 2
         indent: 0
         presetName: Player
@@ -635,7 +457,7 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         value: {fileID: 0}
-    - rid: 5926302200042881238
+    - rid: 5926302200042881613
       type: {class: NumberNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 0
@@ -645,7 +467,7 @@ MonoBehaviour:
         functionDynamicDescription: 
         functionEvaluators: []
         parentNode:
-          rid: 5926302200042881234
+          rid: 5926302200042881575
         parentNodeID: 3
         indent: 0
         presetName: 
@@ -656,7 +478,7 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         value: 1
-    - rid: 5926302200042881239
+    - rid: 5926302200042881614
       type: {class: NumberNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 0
@@ -666,7 +488,7 @@ MonoBehaviour:
         functionDynamicDescription: 
         functionEvaluators: []
         parentNode:
-          rid: 5926302200042881234
+          rid: 5926302200042881575
         parentNodeID: 4
         indent: 0
         presetName: 
@@ -677,28 +499,7 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         value: 1
-    - rid: 5926302200042881340
-      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 3
-        tempName: 
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        parentNode:
-          rid: -2
-        parentNodeID: -1
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: 0
-    - rid: 5926302200042881341
+    - rid: 5926302200042881615
       type: {class: NumberNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 0
@@ -708,8 +509,8 @@ MonoBehaviour:
         functionDynamicDescription: 
         functionEvaluators: []
         parentNode:
-          rid: -2
-        parentNodeID: -1
+          rid: 5926302200042881576
+        parentNodeID: 0
         indent: 0
         presetName: 
         variableName: 
@@ -719,31 +520,324 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         value: 1
-    - rid: 5926302200042881344
-      type: {class: BoolNode, ns: , asm: Assembly-CSharp}
+    - rid: 5926302200042881616
+      type: {class: AbilityNode, ns: , asm: Assembly-CSharp}
       data:
-        returnType: 2
-        tempName: 
-        functionName: NumberComparison
-        functionDescription: Comparisons/Number Comparison
-        functionDynamicDescription: $ $ $
-        functionEvaluators:
-        - rid: 5926302200042881345
-        - rid: 5926302200042881346
-        - rid: 5926302200042881347
+        returnType: 0
+        tempName: Ability
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
         parentNode:
-          rid: -2
-        parentNodeID: -1
+          rid: 5926302200042881577
+        parentNodeID: 0
         indent: 0
         presetName: 
         variableName: 
         stringSuffix: 
-        nodeIcon: Condition
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 0
+        value: {fileID: 11400000, guid: cbbf2357a81cf204b8dadb4602904de0, type: 2}
+    - rid: 5926302200042881617
+      type: {class: AbilityNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Ability
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 5926302200042881577
+        parentNodeID: 1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 0
+        value: {fileID: 11400000, guid: d7a2a3607c219424980b76452feaafd5, type: 2}
+    - rid: 5926302200042881618
+      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 4
+        tempName: Unit
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 5926302200042881577
+        parentNodeID: 2
+        indent: 0
+        presetName: Player
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 0
+        allowPreset: 1
+        allowFunction: 1
+        value: {fileID: 0}
+    - rid: 5926302200042881619
+      type: {class: AbilityNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Ability
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 5926302200042881578
+        parentNodeID: 0
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 0
+        value: {fileID: 11400000, guid: ad9121afb1c453b459632efdf32edf09, type: 2}
+    - rid: 5926302200042881620
+      type: {class: AbilityNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Ability
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 5926302200042881578
+        parentNodeID: 1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 0
+        value: {fileID: 11400000, guid: a535cae6a337b274190d9ad82d544fb1, type: 2}
+    - rid: 5926302200042881621
+      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 4
+        tempName: Unit
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 5926302200042881578
+        parentNodeID: 2
+        indent: 0
+        presetName: Player
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 0
+        allowPreset: 1
+        allowFunction: 1
+        value: {fileID: 0}
+    - rid: 5926302200042881622
+      type: {class: AbilityNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Ability
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 5926302200042881579
+        parentNodeID: 0
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 0
+        value: {fileID: 11400000, guid: 2c0d2df3b515c4d47aa500f8d2a596b8, type: 2}
+    - rid: 5926302200042881623
+      type: {class: AbilityNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Ability
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 5926302200042881579
+        parentNodeID: 1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 0
+        value: {fileID: 11400000, guid: ff60bb7af69a5a24791ca9f3b9180510, type: 2}
+    - rid: 5926302200042881624
+      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 4
+        tempName: Unit
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 5926302200042881579
+        parentNodeID: 2
+        indent: 0
+        presetName: Player
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 0
+        allowPreset: 1
+        allowFunction: 1
+        value: {fileID: 0}
+    - rid: 5926302200042881625
+      type: {class: AbilityNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Ability
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 5926302200042881580
+        parentNodeID: 0
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 0
+        value: {fileID: 11400000, guid: 24b056a147b01e648a011277291f6ce2, type: 2}
+    - rid: 5926302200042881626
+      type: {class: AbilityNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Ability
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 5926302200042881580
+        parentNodeID: 1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 0
+        value: {fileID: 11400000, guid: 20229b3f04ee08f4e85d1bd28b71790f, type: 2}
+    - rid: 5926302200042881627
+      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 4
+        tempName: Unit
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 5926302200042881580
+        parentNodeID: 2
+        indent: 0
+        presetName: Player
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 0
+        allowPreset: 1
+        allowFunction: 1
+        value: {fileID: 0}
+    - rid: 5926302200042881628
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Variable Name
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 5926302200042881581
+        parentNodeID: 0
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 0
+        allowFunction: 0
+        value: PlayerChange
+        options: []
+    - rid: 5926302200042881629
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 5926302200042881581
+        parentNodeID: 1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
         value: 0
-    - rid: 5926302200042881345
+    - rid: 5926302200042881636
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 5926302200042881606
+        parentNodeID: 0
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 0
+        allowFunction: 0
+        value: PlayerChange
+        options: []
+    - rid: 5926302200042881637
       type: {class: NumberNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 2
@@ -752,9 +846,9 @@ MonoBehaviour:
         functionDescription: Global Number Variable
         functionDynamicDescription: 'Global Number: $'
         functionEvaluators:
-        - rid: 5926302200042881360
+        - rid: 5926302200042881641
         parentNode:
-          rid: 5926302200042881344
+          rid: 5926302200042881609
         parentNodeID: 0
         indent: 0
         presetName: 
@@ -765,7 +859,7 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         value: 0
-    - rid: 5926302200042881346
+    - rid: 5926302200042881638
       type: {class: StringNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 0
@@ -775,7 +869,7 @@ MonoBehaviour:
         functionDynamicDescription: 
         functionEvaluators: []
         parentNode:
-          rid: 5926302200042881344
+          rid: 5926302200042881609
         parentNodeID: 1
         indent: 0
         presetName: 
@@ -793,7 +887,7 @@ MonoBehaviour:
         - Less Than or Equal To
         - Greater Than
         - Greater Than or Equal To
-    - rid: 5926302200042881347
+    - rid: 5926302200042881639
       type: {class: NumberNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 0
@@ -803,7 +897,7 @@ MonoBehaviour:
         functionDynamicDescription: 
         functionEvaluators: []
         parentNode:
-          rid: 5926302200042881344
+          rid: 5926302200042881609
         parentNodeID: 2
         indent: 0
         presetName: 
@@ -813,8 +907,8 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 0
-    - rid: 5926302200042881360
+        value: 1
+    - rid: 5926302200042881641
       type: {class: StringNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 0
@@ -824,53 +918,7 @@ MonoBehaviour:
         functionDynamicDescription: 
         functionEvaluators: []
         parentNode:
-          rid: -2
-        parentNodeID: -1
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 0
-        allowFunction: 0
-        value: PlayerChange
-        options: []
-    - rid: 5926302200042881408
-      type: {class: NestingActionNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: 
-        functionName: DoActionsIfBool
-        functionDescription: Flow/If Statement
-        functionDynamicDescription: Do actions if $
-        functionEvaluators:
-        - rid: 5926302200042881409
-        parentNode:
-          rid: -2
-        parentNodeID: -1
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: Condition
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-    - rid: 5926302200042881409
-      type: {class: BoolNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: Bool
-        functionName: NumberComparison
-        functionDescription: Comparisons/Number Comparison
-        functionDynamicDescription: $ $ $
-        functionEvaluators:
-        - rid: 5926302200042881430
-        - rid: 5926302200042881431
-        - rid: 5926302200042881432
-        parentNode:
-          rid: 5926302200042881408
+          rid: 5926302200042881637
         parentNodeID: 0
         indent: 0
         presetName: 
@@ -878,103 +926,11 @@ MonoBehaviour:
         stringSuffix: 
         nodeIcon: 
         allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: 0
-    - rid: 5926302200042881430
-      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: 
-        functionName: GetGlobalNumberVariable
-        functionDescription: Global Number Variable
-        functionDynamicDescription: 'Global Number: $'
-        functionEvaluators:
-        - rid: 5926302200042881441
-        parentNode:
-          rid: -2
-        parentNodeID: -1
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: 0
-    - rid: 5926302200042881431
-      type: {class: StringNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: 
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        parentNode:
-          rid: -2
-        parentNodeID: -1
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 0
-        allowFunction: 0
-        value: Equal To
-        options:
-        - Equal To
-        - Not Equal To
-        - Less Than
-        - Less Than or Equal To
-        - Greater Than
-        - Greater Than or Equal To
-    - rid: 5926302200042881432
-      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: 
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        parentNode:
-          rid: -2
-        parentNodeID: -1
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: 0
-    - rid: 5926302200042881441
-      type: {class: StringNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: 
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        parentNode:
-          rid: -2
-        parentNodeID: -1
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: 
-        allowValue: 1
         allowPreset: 0
         allowFunction: 0
         value: PlayerChange
         options: []
-    - rid: 5926302200042881646
+    - rid: 5926302200042881642
       type: {class: ActionNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 2
@@ -983,13 +939,13 @@ MonoBehaviour:
         functionDescription: Unit/Ability/Replace Ability
         functionDynamicDescription: Replace $ with $ on $
         functionEvaluators:
-        - rid: 5926302200042881647
-        - rid: 5926302200042881648
-        - rid: 5926302200042881649
+        - rid: 5926302200042881643
+        - rid: 5926302200042881644
+        - rid: 5926302200042881645
         parentNode:
           rid: -2
         parentNodeID: -1
-        indent: 1
+        indent: 0
         presetName: 
         variableName: 
         stringSuffix: 
@@ -997,7 +953,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-    - rid: 5926302200042881647
+    - rid: 5926302200042881643
       type: {class: AbilityNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 0
@@ -1007,7 +963,7 @@ MonoBehaviour:
         functionDynamicDescription: 
         functionEvaluators: []
         parentNode:
-          rid: 5926302200042881646
+          rid: 5926302200042881642
         parentNodeID: 0
         indent: 0
         presetName: 
@@ -1018,7 +974,7 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 0
         value: {fileID: 11400000}
-    - rid: 5926302200042881648
+    - rid: 5926302200042881644
       type: {class: AbilityNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 0
@@ -1028,7 +984,7 @@ MonoBehaviour:
         functionDynamicDescription: 
         functionEvaluators: []
         parentNode:
-          rid: 5926302200042881646
+          rid: 5926302200042881642
         parentNodeID: 1
         indent: 0
         presetName: 
@@ -1038,8 +994,8 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 0
-        value: {fileID: 11400000, guid: 0c6c7a964b4d0a041b6381382a63cb2b, type: 2}
-    - rid: 5926302200042881649
+        value: {fileID: 11400000, guid: 44513227cffe0a047901224dbd5a053f, type: 2}
+    - rid: 5926302200042881645
       type: {class: UnitNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 4
@@ -1049,7 +1005,7 @@ MonoBehaviour:
         functionDynamicDescription: 
         functionEvaluators: []
         parentNode:
-          rid: 5926302200042881646
+          rid: 5926302200042881642
         parentNodeID: 2
         indent: 0
         presetName: Player

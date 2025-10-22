@@ -33604,7 +33604,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1291748134
 Transform:
   m_ObjectHideFlags: 0
@@ -41897,7 +41897,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!195 &1442890800
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -44116,9 +44116,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   change: 0
-  currentPlayer: {fileID: 1442890803}
-  necromaner: {fileID: 1725328248}
-  skeleton: {fileID: 1287761024}
   necromancerPreFab: {fileID: 1655630932}
   skeletonPreFab: {fileID: 1976811517}
 --- !u!4 &1558201877

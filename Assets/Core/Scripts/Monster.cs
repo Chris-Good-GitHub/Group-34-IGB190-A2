@@ -141,6 +141,7 @@ public class Monster : Unit
         if (target == null && CanMove() && GetFaction() == Faction.Player)
         {
             agentNavigation.SetDestination(GameManager.player.transform.position);
+            
         }
         else if (target != null && CanMove() && !InRange(target.transform.position))
         {

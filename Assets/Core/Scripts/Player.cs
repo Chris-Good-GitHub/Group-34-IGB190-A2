@@ -263,12 +263,14 @@ public class Player : Unit
         else if (leftClickAbility == null && Input.GetMouseButton(LEFT))
         {
             agentNavigation.SetDestination(targetPosition);
+            Debug.Log("In 1");
         }
 
         // No monster selected, move towards target location.
         else if (Input.GetMouseButton(LEFT) && GameManager.hoveredMonster == null)
         {
             agentNavigation.SetDestination(targetPosition);
+            Debug.Log("In 2");
         }
 
         // Move into range of the target.
