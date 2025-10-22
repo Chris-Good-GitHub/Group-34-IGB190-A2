@@ -17,6 +17,7 @@ MonoBehaviour:
     - scriptName: Main
       scriptUID: 2000365692
       hasWait: 0
+<<<<<<< Updated upstream
       eventNodes:
       - rid: 5926302139575173120
       conditionNodes: []
@@ -26,11 +27,19 @@ MonoBehaviour:
       - rid: 5926302200042881271
       - rid: 5926302139575173124
       - rid: 5926302139575173129
+=======
+      eventNodes: []
+      conditionNodes:
+      - rid: 5843367098919944292
+      actionNodes:
+      - rid: 5843367098919944296
+>>>>>>> Stashed changes
   references:
     version: 2
     RefIds:
     - rid: -2
       type: {class: , ns: , asm: }
+<<<<<<< Updated upstream
     - rid: 5926302139575173120
       type: {class: EventNode, ns: , asm: Assembly-CSharp}
       data:
@@ -39,6 +48,175 @@ MonoBehaviour:
         functionName: OnPlayerLevelUp
         functionDescription: Player/Player gains a level
         functionDynamicDescription: When the player gains a level
+=======
+    - rid: 5843367098919944292
+      type: {class: BoolNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: NumberComparison
+        functionDescription: Comparisons/Number Comparison
+        functionDynamicDescription: $ $ $
+        functionEvaluators:
+        - rid: 5843367098919944293
+        - rid: 5843367098919944294
+        - rid: 5843367098919944295
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: Condition
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 0
+    - rid: 5843367098919944293
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: GetPlayerLevel
+        functionDescription: Player/Player Level
+        functionDynamicDescription: Player Level
+        functionEvaluators: []
+        parentNode:
+          rid: 5843367098919944292
+        parentNodeID: 0
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 0
+    - rid: 5843367098919944294
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 5843367098919944292
+        parentNodeID: 1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 0
+        allowFunction: 0
+        value: Greater Than or Equal To
+        options:
+        - Equal To
+        - Not Equal To
+        - Less Than
+        - Less Than or Equal To
+        - Greater Than
+        - Greater Than or Equal To
+    - rid: 5843367098919944295
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 5843367098919944292
+        parentNodeID: 2
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 2
+    - rid: 5843367098919944296
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: AddAbilityToUnit
+        functionDescription: Unit/Ability/Add Ability
+        functionDynamicDescription: Add $ to $
+        functionEvaluators:
+        - rid: 5843367098919944297
+        - rid: 5843367098919944298
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: Unit
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 5843367098919944297
+      type: {class: AbilityNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Ability
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 5843367098919944296
+        parentNodeID: 0
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 0
+        value: {fileID: 11400000, guid: 7e9b829a8bc8de041bfa13b5fb7819a0, type: 2}
+    - rid: 5843367098919944298
+      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: Unit
+        functionName: GetUnitWithLabel
+        functionDescription: Unit with Label
+        functionDynamicDescription: Unit labeled $
+        functionEvaluators:
+        - rid: 5843367118332756610
+        parentNode:
+          rid: 5843367098919944296
+        parentNodeID: 1
+        indent: 0
+        presetName: Last Spawned Unit
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 0
+        allowPreset: 1
+        allowFunction: 1
+        value: {fileID: 0}
+    - rid: 5843367118332756610
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+>>>>>>> Stashed changes
         functionEvaluators: []
         parentNode:
           rid: -2
@@ -47,6 +225,7 @@ MonoBehaviour:
         presetName: 
         variableName: 
         stringSuffix: 
+<<<<<<< Updated upstream
         nodeIcon: Event
         allowValue: 1
         allowPreset: 1
@@ -351,3 +530,11 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         value: {fileID: 0}
+=======
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: Monster
+        options: []
+>>>>>>> Stashed changes

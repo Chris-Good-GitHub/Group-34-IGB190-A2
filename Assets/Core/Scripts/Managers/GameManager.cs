@@ -222,7 +222,7 @@ public class GameManager : MonoBehaviour
     [System.Serializable]
     public class ArmorValues
     {
-        public float maxArmor = 1000;
+        public float maxArmor = 150;
         public AnimationCurve armorDamageReductionCurve;
     }
 

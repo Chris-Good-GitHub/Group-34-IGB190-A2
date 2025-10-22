@@ -18,7 +18,7 @@ public class Unit : Interactable
     [SerializeField] protected float baseMaxHealth = 100;
     [SerializeField] protected float baseMaxResource = 100;
     [SerializeField] protected float baseMovementSpeed = 3.0f;
-    [SerializeField] protected float baseArmor = 100;
+    [SerializeField] protected float baseArmor = 0;
     [SerializeField] protected float baseCriticalStrikeChance = 0.2f;
     [SerializeField] protected float baseCriticalStrikeDamage = 2.0f;
     [SerializeField] protected float baseHealthRegen = 0.0f;
@@ -479,8 +479,20 @@ public class Unit : Interactable
     /// </summary>
     protected virtual float GetArmorDamageTakenModifier()
     {
-        return 1.0f - (GameManager.armorValues.armorDamageReductionCurve.Evaluate(
+
+        float value = 1.0f - (GameManager.armorValues.armorDamageReductionCurve.Evaluate(
             stats.GetValue(Stat.Armor) / GameManager.armorValues.maxArmor));
+
+        if (value < 0.5){
+            return 0.5f;
+        }
+
+        return value;
+
+
+
+
+
     }
 
     /// <summary>
@@ -510,7 +522,8 @@ public class Unit : Interactable
 
         // Trigger OnUnitDamaged event.
         GameManager.events.OnUnitDamaged.Invoke(new GameEvents.OnUnitDamagedInfo(this, amount, damagingUnit, damageSource, isCritical));
-    } 
+    }
+
 
     /// <summary>
     /// Kill the unit, destroying the unit logic but keeping the model 

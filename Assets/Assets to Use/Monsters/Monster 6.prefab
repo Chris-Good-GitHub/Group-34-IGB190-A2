@@ -276,6 +276,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 066562e3a42d62a4e933c79ad7c0eb54, type: 3}
+      propertyPath: m_TagString
+      value: Undefined
+      objectReference: {fileID: 0}
     - target: {fileID: 1007777169394542574, guid: 066562e3a42d62a4e933c79ad7c0eb54, type: 3}
       propertyPath: m_Layer
       value: 7
@@ -521,7 +525,7 @@ MonoBehaviour:
   goldModifier: 1
   experienceModifier: 30
   corpseDuration: 5
-  monsterLabel: 
+  monsterLabel: Monster
   isEmpowered: 0
   healthBarType: 0
   uiSize: 1

@@ -35,6 +35,7 @@ public class Monster : Unit
     [Range(1, 10)] public int spawnLevel = 1;
     [Range(0, 10)] public int spawnLikelihood = 5;
 
+
     private const float StopDistanceBuffer = 0.1f;
     private const float MaximumPossibleRange = 10f;
     private const float DamageNumberSpawnVariance = 0.3f;
@@ -59,10 +60,10 @@ public class Monster : Unit
     /// </summary>
     protected override void Start()
     {
+        ApplyMonsterScaling();
         base.Start();
         CacheComponents();
         CalculateTargetRange();
-        ApplyMonsterScaling();
         CreateHealthBar();
         ApplySpawnDelay();
         SetInitialFacing();
@@ -202,6 +203,7 @@ public class Monster : Unit
     /// </summary>
     public override void TakeDamage(float amount, bool isCritical, Unit damagingUnit, IVisualCodeHandler damageSource)
     {
+
         base.TakeDamage(amount, isCritical, damagingUnit, damageSource);
         if (GameManager.settings.showDamageNumbers && GetFaction() != Faction.Player)
         {

@@ -119,8 +119,21 @@ public class Player : Unit
     /// </summary>
     public override void TakeDamage(float amount, bool isCritical, Unit damagingUnit, IVisualCodeHandler damageSource)
     {
-        base.TakeDamage(amount, isCritical, damagingUnit, damageSource);
+        if (isDead) return;
+
+        amount = ApplyDamageFormula(amount, isCritical, damagingUnit, damageSource) * GetArmorDamageTakenModifier();
+        if (amount< 0) return;
+
+        // Remove the health.
+        RemoveHealth(amount, damagingUnit, damageSource, isCritical);
+
+    // Apply the "on hit" feedback for this unit.
+    onHitFeedback?.ActivateFeedback(gameObject, null, transform.position);
+
+    // Trigger OnUnitDamaged event.
+    GameManager.events.OnUnitDamaged.Invoke(new GameEvents.OnUnitDamagedInfo(this, amount, damagingUnit, damageSource, isCritical));
     }
+
 
     /// <summary>
     /// Sell the given item, receiving the cost of the item modified by a global sell factor.
@@ -422,6 +435,7 @@ public class Player : Unit
         for (int i = 0; i < levelsToAdd; i++)
         {
             currentLevel++;
+
             UpdateExperienceRequiredForLevel();
             GameManager.events.OnPlayerLevelUp.Invoke(this);
             levelUpFeedback.ActivateFeedback(gameObject, null, transform.position);
