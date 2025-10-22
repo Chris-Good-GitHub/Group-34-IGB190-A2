@@ -18,7 +18,10 @@ MonoBehaviour:
   abilityFlavourText: Raise those you have slain as your own.
   abilityIcon: {fileID: 21300000, guid: de62dd11381d6114f9b8f631216eefc4, type: 3}
   targetMode: 4
-  abilityDescription: Use your soul to reanimate a dead soul.
+  abilityDescription: 'Summon a zombie to fight for you.
+
+    [Death Touched] enemies
+    killed allow you to summon.'
   abilityAnimation: Bow Shoot
   range: 8
   castTime: 0.1

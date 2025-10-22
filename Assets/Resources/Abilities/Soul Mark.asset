@@ -18,8 +18,12 @@ MonoBehaviour:
   abilityFlavourText: Focus your power and mark your sacrifices.
   abilityIcon: {fileID: 21300000, guid: 13961b2c7a8f6f44a8fec84696b6c293, type: 3}
   targetMode: 4
-  abilityDescription: Fire magic towards the target location, dealing 100% attack
-    damage and marking the enemies hit.
+  abilityDescription: 'Fire magic towards the target location, dealing 100% attack
+    damage and [Death Touching] the enemies hit.
+
+
+    [Death Touched] When the marked
+    unit dies generate resource for summoning allies.'
   abilityAnimation: Soul Mark
   range: 8
   castTime: 1

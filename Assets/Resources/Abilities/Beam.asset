@@ -15,10 +15,10 @@ MonoBehaviour:
   engine:
     rid: 5926301772953419905
   abilityName: Beam
-  abilityFlavourText: 
+  abilityFlavourText: Use your will to constantly damage those at your whim.
   abilityIcon: {fileID: 21300000, guid: ebaef5902556fef44b513ae4e893d599, type: 3}
   targetMode: 4
-  abilityDescription: 
+  abilityDescription: Deal 10% damage to an enemy. Low cool down.
   abilityAnimation: None
   range: 999
   castTime: 0

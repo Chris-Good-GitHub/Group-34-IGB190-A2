@@ -18,8 +18,8 @@ MonoBehaviour:
   abilityFlavourText: 
   abilityIcon: {fileID: 21300000, guid: 8095cd4e844ae5d4f9ffee0df9cba6f5, type: 3}
   targetMode: 4
-  abilityDescription: Swing with a mighty attack, dealing 50% attack damage to all
-    units in front of the caster.
+  abilityDescription: Swing with a mighty attack, dealing 150% attack damage to all
+    units 3m from the caster.
   abilityAnimation: Two Hand Slash
   range: 2
   castTime: 0
