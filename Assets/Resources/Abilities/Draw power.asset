@@ -33,7 +33,7 @@ MonoBehaviour:
   requiresLineOfSight: 0
   canUpdateTargetWhileCasting: 0
   castAtClosestPointInRange: 1
-  castCompleteSound: {fileID: 0}
+  castCompleteSound: {fileID: 8300000, guid: f1cb5d83282f2904a85f73111d068616, type: 3}
   castCompleteSoundVolume: 1
   needsReminderFlash: 0
   isUnlocked: 1
@@ -723,4 +723,4 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 2
+        value: 1
