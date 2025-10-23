@@ -270,7 +270,6 @@ public class Player : Unit
         else if (Input.GetMouseButton(LEFT) && GameManager.hoveredMonster == null)
         {
             agentNavigation.SetDestination(targetPosition);
-            Debug.Log("In 2");
         }
 
         // Move into range of the target.
