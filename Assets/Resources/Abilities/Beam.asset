@@ -15,17 +15,17 @@ MonoBehaviour:
   engine:
     rid: 5926301772953419905
   abilityName: Beam
-  abilityFlavourText: Use your will to constantly damage those at your whim.
+  abilityFlavourText: 
   abilityIcon: {fileID: 21300000, guid: ebaef5902556fef44b513ae4e893d599, type: 3}
   targetMode: 4
-  abilityDescription: Deal 10% damage to an enemy. Low cool down.
-  abilityAnimation: None
+  abilityDescription: 
+  abilityAnimation: Soul Mark
   range: 999
   castTime: 0
-  abilityCooldown: 0.001
+  abilityCooldown: 0.1
   abilityCost: 0
   movementLock: 1
-  animationActivationPosition: 0.075
+  animationActivationPosition: 0.5
   canMoveWhileCasting: 0
   hasSpecificCastTime: 0
   cooldownIsAtackSpeed: 0
@@ -63,8 +63,8 @@ MonoBehaviour:
           - rid: 5926301772953419966
           conditionNodes: []
           actionNodes:
-          - rid: 5926301772953419978
           - rid: 5926301772953419967
+          - rid: 5926301772953419978
     - rid: 5926301772953419906
       type: {class: EventNode, ns: , asm: Assembly-CSharp}
       data:
@@ -331,7 +331,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 10
+        value: 100
     - rid: 5926301772953419969
       type: {class: UnitNode, ns: , asm: Assembly-CSharp}
       data:

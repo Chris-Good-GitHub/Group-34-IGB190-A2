@@ -17,7 +17,6 @@ public class Player : Unit
     [DoNotSerialize] public Inventory inventory;
     [DoNotSerialize] public Inventory equipment;
     [DoNotSerialize] public Inventory sellSlot;
-    [DoNotSerialize] public int SetBonus = 0;
 
     public GameFeedback levelUpFeedback;
     public string resourceName = "Resource";
@@ -119,21 +118,8 @@ public class Player : Unit
     /// </summary>
     public override void TakeDamage(float amount, bool isCritical, Unit damagingUnit, IVisualCodeHandler damageSource)
     {
-        if (isDead) return;
-
-        amount = ApplyDamageFormula(amount, isCritical, damagingUnit, damageSource) * GetArmorDamageTakenModifier();
-        if (amount< 0) return;
-
-        // Remove the health.
-        RemoveHealth(amount, damagingUnit, damageSource, isCritical);
-
-    // Apply the "on hit" feedback for this unit.
-    onHitFeedback?.ActivateFeedback(gameObject, null, transform.position);
-
-    // Trigger OnUnitDamaged event.
-    GameManager.events.OnUnitDamaged.Invoke(new GameEvents.OnUnitDamagedInfo(this, amount, damagingUnit, damageSource, isCritical));
+        base.TakeDamage(amount, isCritical, damagingUnit, damageSource);
     }
-
 
     /// <summary>
     /// Sell the given item, receiving the cost of the item modified by a global sell factor.
@@ -263,7 +249,6 @@ public class Player : Unit
         else if (leftClickAbility == null && Input.GetMouseButton(LEFT))
         {
             agentNavigation.SetDestination(targetPosition);
-            Debug.Log("In 1");
         }
 
         // No monster selected, move towards target location.
@@ -436,7 +421,6 @@ public class Player : Unit
         for (int i = 0; i < levelsToAdd; i++)
         {
             currentLevel++;
-
             UpdateExperienceRequiredForLevel();
             GameManager.events.OnPlayerLevelUp.Invoke(this);
             levelUpFeedback.ActivateFeedback(gameObject, null, transform.position);
@@ -492,10 +476,6 @@ public class Player : Unit
     /// </summary>
     public void OnItemEquipped(Item item)
     {
-        if (item.GetTag() == "Set")
-        {
-            SetBonus += 1;
-        }
         GameManager.events.OnItemEquipped.Invoke(item);
         GameManager.logicEngine.AddEngine(item.engine);
         foreach (Item.RolledStatValue rolledStatValue in item.rolledStatValues)
@@ -521,10 +501,6 @@ public class Player : Unit
         GameManager.events.OnItemUnequipped.Invoke(item);
         stats.RemoveBuffWithLabel(item.GetInstanceID().ToString());
         GameManager.logicEngine.RemoveEngine(item.engine);
-        if (item.GetTag() == "Set")
-        {
-            SetBonus -= 1;
-        }
     }
 
     /// <summary>

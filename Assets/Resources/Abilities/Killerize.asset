@@ -152,7 +152,7 @@ MonoBehaviour:
     - rid: 7831317033250193413
       type: {class: ItemNode, ns: , asm: Assembly-CSharp}
       data:
-        returnType: 3
+        returnType: 0
         tempName: Item
         functionName: 
         functionDescription: 

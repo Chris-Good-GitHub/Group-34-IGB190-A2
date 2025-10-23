@@ -18,12 +18,12 @@ public class Unit : Interactable
     [SerializeField] protected float baseMaxHealth = 100;
     [SerializeField] protected float baseMaxResource = 100;
     [SerializeField] protected float baseMovementSpeed = 3.0f;
-    [SerializeField] protected float baseArmor = 0;
+    [SerializeField] protected float baseArmor = 100;
     [SerializeField] protected float baseCriticalStrikeChance = 0.2f;
     [SerializeField] protected float baseCriticalStrikeDamage = 2.0f;
     [SerializeField] protected float baseHealthRegen = 0.0f;
     [SerializeField] protected float baseResourceRegen = 0.0f;
-    [SerializeField] public bool marked = false;
+    [SerializeField] protected bool marked = false;
     public float baseAttackRange = 2.0f;
     
     
@@ -130,8 +130,6 @@ public class Unit : Interactable
     protected override void Update()
     {
         base.Update();
-        if (animator == null || animator.gameObject.activeSelf == false)
-            animator = GetComponentInChildren<Animator>();
         if (GameManager.player.isDead) return;
         if (!(unitIsActive = IsUnitActive())) return;
         ApplyStatBuffs();
@@ -481,20 +479,8 @@ public class Unit : Interactable
     /// </summary>
     protected virtual float GetArmorDamageTakenModifier()
     {
-
-        float value = 1.0f - (GameManager.armorValues.armorDamageReductionCurve.Evaluate(
+        return 1.0f - (GameManager.armorValues.armorDamageReductionCurve.Evaluate(
             stats.GetValue(Stat.Armor) / GameManager.armorValues.maxArmor));
-
-        if (value < 0.5){
-            return 0.5f;
-        }
-
-        return value;
-
-
-
-
-
     }
 
     /// <summary>
@@ -524,8 +510,7 @@ public class Unit : Interactable
 
         // Trigger OnUnitDamaged event.
         GameManager.events.OnUnitDamaged.Invoke(new GameEvents.OnUnitDamagedInfo(this, amount, damagingUnit, damageSource, isCritical));
-    }
-
+    } 
 
     /// <summary>
     /// Kill the unit, destroying the unit logic but keeping the model 

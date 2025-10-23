@@ -10,20 +10,37 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c1cdd5fc33fd8b841b7c7cd7dff9b881, type: 3}
-  m_Name: Set Armor
+  m_Name: Leather-Strap Boots
   m_EditorClassIdentifier: 
-  itemName: Set Armor
+  itemName: Leather-Strap Boots
   itemDescription: 
-  itemTag: set
-  itemFlavourText: 
+  itemTag: 
+  itemFlavourText: A less-than-sturdy pair of boots held together by a weathered
+    strap of leather.
   classRequirement: 
-  itemIcon: {fileID: 21300000, guid: 5ee626c5c13289943ba7685e2a78f431, type: 3}
-  itemType: 3
+  itemIcon: {fileID: 21300000, guid: 87a6ace052badc94890297eb1f920c27, type: 3}
+  itemType: 4
   itemRarity: 0
-  itemCost: 0
-  randomStatCount: 0
-  guaranteedStats: []
-  randomisableStats: []
+  itemCost: 250
+  randomStatCount: 1
+  guaranteedStats:
+  - stat: 6
+    minimum: 0.15
+    maximum: 0.2
+    isPercent: 1
+  randomisableStats:
+  - stat: 3
+    minimum: 0
+    maximum: 0.01
+    isPercent: 1
+  - stat: 7
+    minimum: 0.1
+    maximum: 0.2
+    isPercent: 1
+  - stat: 8
+    minimum: 0.1
+    maximum: 0.2
+    isPercent: 1
   minimumDropLevel: 0
   canPurchaseInShop: 1
   canDropOffMonster: 1
@@ -31,17 +48,17 @@ MonoBehaviour:
   engine:
     scripts:
     - scriptName: Item Equipped
-      scriptUID: 1979468309
+      scriptUID: 1140412884
       hasWait: 0
       eventNodes:
-      - rid: 8442518271299420164
+      - rid: 7831317306299908096
       conditionNodes: []
       actionNodes: []
     - scriptName: Item Unequipped
-      scriptUID: 474422648
+      scriptUID: 1572659300
       hasWait: 0
       eventNodes:
-      - rid: 8442518271299420165
+      - rid: 7831317306299908097
       conditionNodes: []
       actionNodes: []
   references:
@@ -49,7 +66,7 @@ MonoBehaviour:
     RefIds:
     - rid: -2
       type: {class: , ns: , asm: }
-    - rid: 8442518271299420164
+    - rid: 7831317306299908096
       type: {class: EventNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 2
@@ -70,7 +87,7 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         presets: []
-    - rid: 8442518271299420165
+    - rid: 7831317306299908097
       type: {class: EventNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 2

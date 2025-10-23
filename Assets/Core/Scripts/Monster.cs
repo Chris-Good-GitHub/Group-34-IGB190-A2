@@ -19,7 +19,6 @@ public class Monster : Unit
     public UnitSpawnEffect spawnEffect;
 
     [Header("Monster Properties")]
-    public bool notMarked = true;
     public float goldModifier = 1.0f;
     public float experienceModifier = 1.0f;
     public float corpseDuration = 5.0f;
@@ -34,7 +33,6 @@ public class Monster : Unit
     [Header("Spawn Data")]
     [Range(1, 10)] public int spawnLevel = 1;
     [Range(0, 10)] public int spawnLikelihood = 5;
-
 
     private const float StopDistanceBuffer = 0.1f;
     private const float MaximumPossibleRange = 10f;
@@ -60,10 +58,10 @@ public class Monster : Unit
     /// </summary>
     protected override void Start()
     {
-        ApplyMonsterScaling();
         base.Start();
         CacheComponents();
         CalculateTargetRange();
+        ApplyMonsterScaling();
         CreateHealthBar();
         ApplySpawnDelay();
         SetInitialFacing();
@@ -141,7 +139,6 @@ public class Monster : Unit
         if (target == null && CanMove() && GetFaction() == Faction.Player)
         {
             agentNavigation.SetDestination(GameManager.player.transform.position);
-            
         }
         else if (target != null && CanMove() && !InRange(target.transform.position))
         {
@@ -204,7 +201,6 @@ public class Monster : Unit
     /// </summary>
     public override void TakeDamage(float amount, bool isCritical, Unit damagingUnit, IVisualCodeHandler damageSource)
     {
-
         base.TakeDamage(amount, isCritical, damagingUnit, damageSource);
         if (GameManager.settings.showDamageNumbers && GetFaction() != Faction.Player)
         {
