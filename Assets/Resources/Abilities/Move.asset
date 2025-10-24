@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3ba5be5e9a4ad5d49a4183e2e4440724, type: 3}
-  m_Name: None
+  m_Name: Move
   m_EditorClassIdentifier: 
   engine:
     rid: 8442518272303169609
-  abilityName: None
-  abilityFlavourText: 
-  abilityIcon: {fileID: 21300000, guid: d711227726447a64085db49f9f71f332, type: 3}
+  abilityName: Move
+  abilityFlavourText: I need to run.
+  abilityIcon: {fileID: 21300000, guid: 7de71d851620bb246abf24f524d72a52, type: 3}
   targetMode: 3
-  abilityDescription: Locked ability
+  abilityDescription: Hold Left Click to move to a target location.
   abilityAnimation: None
   range: 999
   castTime: 0
