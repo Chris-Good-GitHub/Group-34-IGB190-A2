@@ -32,8 +32,8 @@ public class Monster : Unit
     public float uiHeight = 2.0f;
 
     [Header("Spawn Data")]
-    [Range(1, 10)] public int spawnLevel = 1;
-    [Range(0, 10)] public int spawnLikelihood = 5;
+    [Range(1, 7)] public int spawnLevel = 1;
+    [Range(0, 7)] public int spawnLikelihood = 5;
 
 
     private const float StopDistanceBuffer = 0.1f;
