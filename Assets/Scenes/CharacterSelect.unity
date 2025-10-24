@@ -228,7 +228,7 @@ GameObject:
   - component: {fileID: 22820017}
   - component: {fileID: 22820016}
   m_Layer: 5
-  m_Name: CustomCharacterInfo
+  m_Name: NecromancerInfo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8427,7 +8427,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Custom Character
+  m_text: Necromancer
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f8f5700936f4a7b49b055763ecdd2065, type: 2}
   m_sharedMaterial: {fileID: -5745236825215515014, guid: f8f5700936f4a7b49b055763ecdd2065, type: 2}
@@ -14569,7 +14569,7 @@ GameObject:
   m_Component:
   - component: {fileID: 678249952}
   m_Layer: 5
-  m_Name: Custom Character Components
+  m_Name: Necromancer Components
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18357,7 +18357,7 @@ GameObject:
   - component: {fileID: 1241817219}
   - component: {fileID: 1241817218}
   m_Layer: 5
-  m_Name: CustomCharacterText
+  m_Name: NecromancerText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20739,6 +20739,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 402895158}
     m_Modifications:
+    - target: {fileID: 423445965720207947, guid: 0eb6d68f13678de47a7184dbb4b781f5, type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2603288073425795745, guid: 0eb6d68f13678de47a7184dbb4b781f5, type: 3}
       propertyPath: m_Name
       value: Player (mini)
@@ -20795,7 +20799,10 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 2603288073425795745, guid: 0eb6d68f13678de47a7184dbb4b781f5, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1700065183}
+      addedObject: {fileID: 1700065186}
+    - targetCorrespondingSourceObject: {fileID: 2603288073425795745, guid: 0eb6d68f13678de47a7184dbb4b781f5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1700065187}
   m_SourcePrefab: {fileID: 100100000, guid: 0eb6d68f13678de47a7184dbb4b781f5, type: 3}
 --- !u!4 &1589243882 stripped
 Transform:
@@ -25947,7 +25954,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Write your own  custom description here!
+  m_text: 'Left in a dungeon to rot, the Necromancer stumbles upon a grimoire
 
 
     <color=#88FF88>Strength</color>:
@@ -26101,7 +26108,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2603288073425795745, guid: 0eb6d68f13678de47a7184dbb4b781f5, type: 3}
   m_PrefabInstance: {fileID: 1589243881}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1700065183
+--- !u!114 &1700065186
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -26110,12 +26117,35 @@ MonoBehaviour:
   m_GameObject: {fileID: 1700065179}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 34a75cb68fd9b034bb95dd240603832d, type: 3}
+  m_Script: {fileID: 11500000, guid: b5c3f6f85d6217344ac472bcfb3e341d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectACharacter: {fileID: 1700065179}
-  confirmButton: {fileID: 0}
-  fadeOut: {fileID: 0}
+  characterName: Necromancer
+  characterTitle: {fileID: 1734044030}
+  characterHide: {fileID: 130209919}
+  characterDetails: {fileID: 22820014}
+--- !u!95 &1700065187
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1700065179}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 91f1429de22af07499ab3cf82c83112a, type: 3}
+  m_Controller: {fileID: 9100000, guid: 3b3b3adbc7d94864e91ed405d8a21a67, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1701194750
 GameObject:
   m_ObjectHideFlags: 0
@@ -26469,7 +26499,7 @@ GameObject:
   - component: {fileID: 1734044033}
   - component: {fileID: 1734044032}
   m_Layer: 5
-  m_Name: CustomCharacterText
+  m_Name: Necromancer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26569,7 +26599,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -44.999207, y: 200}
+  m_AnchoredPosition: {x: -44.999268, y: 200}
   m_SizeDelta: {x: 350, y: 100}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &1737801533
@@ -28601,7 +28631,7 @@ GameObject:
   - component: {fileID: 2116695368}
   - component: {fileID: 2116695367}
   m_Layer: 5
-  m_Name: CustomCharacterShadow
+  m_Name: NecromancerShadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
