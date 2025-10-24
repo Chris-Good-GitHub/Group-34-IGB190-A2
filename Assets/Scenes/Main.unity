@@ -90134,6 +90134,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Training Dummy (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1406668773340856009, guid: 488db8be584ff7948ab28f0fbd807603, type: 3}
+      propertyPath: spawnLikelihood
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4680151089817997034, guid: 488db8be584ff7948ab28f0fbd807603, type: 3}
       propertyPath: m_LocalPosition.x
       value: -38.04

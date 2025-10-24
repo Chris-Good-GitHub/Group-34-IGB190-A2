@@ -44,6 +44,48 @@ MonoBehaviour:
     RefIds:
     - rid: -2
       type: {class: , ns: , asm: }
+    - rid: 252622140536259018
+      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 4
+        tempName: Unit
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: Target Unit
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 0
+        allowPreset: 1
+        allowFunction: 1
+        value: {fileID: 0}
+    - rid: 252622140536259019
+      type: {class: AbilityNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Ability
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: {fileID: 11400000, guid: 1669e6fb6a9074c42a3e9160a2b8c5e1, type: 2}
     - rid: 5843367094385377405
       type: {class: NumberNode, ns: , asm: Assembly-CSharp}
       data:
@@ -797,8 +839,8 @@ MonoBehaviour:
         functionDescription: Unit/Unit Can Cast ability
         functionDynamicDescription: $ can cast $
         functionEvaluators:
-        - rid: 5926302139575173167
-        - rid: 5926302139575173168
+        - rid: 252622140536259018
+        - rid: 252622140536259019
         parentNode:
           rid: 5926302139575173147
         parentNodeID: 0
@@ -811,49 +853,6 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         value: 0
-    - rid: 5926302139575173167
-      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: Unit
-        functionName: GetUnitVariable
-        functionDescription: Unit Variable
-        functionDynamicDescription: 'Unit: $'
-        functionEvaluators:
-        - rid: 5926302247909064857
-        parentNode:
-          rid: -2
-        parentNodeID: -1
-        indent: 0
-        presetName: Target Unit
-        variableName: 
-        stringSuffix: 
-        nodeIcon: 
-        allowValue: 0
-        allowPreset: 1
-        allowFunction: 1
-        value: {fileID: 0}
-    - rid: 5926302139575173168
-      type: {class: AbilityNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: Ability
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        parentNode:
-          rid: -2
-        parentNodeID: -1
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: {fileID: 11400000, guid: 1669e6fb6a9074c42a3e9160a2b8c5e1, type: 2}
     - rid: 5926302159653830823
       type: {class: ActionNode, ns: , asm: Assembly-CSharp}
       data:
@@ -1289,28 +1288,6 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         value: Targets
-        options: []
-    - rid: 5926302247909064857
-      type: {class: StringNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: Variable Name
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        parentNode:
-          rid: -2
-        parentNodeID: -1
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: Target Unit
         options: []
     - rid: 5926302247909064887
       type: {class: NumberNode, ns: , asm: Assembly-CSharp}

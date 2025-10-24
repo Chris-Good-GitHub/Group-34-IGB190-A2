@@ -21,7 +21,7 @@ MonoBehaviour:
   itemType: 4
   itemRarity: 2
   itemCost: 1000
-  randomStatCount: 3
+  randomStatCount: 2
   guaranteedStats:
   - stat: 6
     minimum: 0.7

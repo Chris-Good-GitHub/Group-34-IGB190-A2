@@ -77,6 +77,7 @@ MonoBehaviour:
   isDead: 0
   faction: 1
   spawnEffect: {fileID: 4062287519753572544, guid: 332ddaa5f7738b142ac986212c018770, type: 3}
+  notMarked: 1
   goldModifier: 1
   experienceModifier: 1
   corpseDuration: 5
@@ -86,7 +87,7 @@ MonoBehaviour:
   uiSize: 1
   uiHeight: 1.7
   spawnLevel: 1
-  spawnLikelihood: 10
+  spawnLikelihood: 7
 --- !u!65 &1408620102498460199
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -18,7 +18,7 @@ MonoBehaviour:
   abilityFlavourText: Draw power and transform
   abilityIcon: {fileID: 21300000, guid: 5e21898b38b93b040bcea9429e8b4188, type: 3}
   targetMode: 0
-  abilityDescription: Change into your skeleton side. A more melee focused play-style.
+  abilityDescription: Change into your Skeleton side. A more melee focused play-style.
   abilityAnimation: Shout
   range: 999
   castTime: 0

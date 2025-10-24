@@ -81,6 +81,10 @@ PrefabInstance:
       value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: c7d1782e38dd4b148bc51dc6d2ce490c, type: 3}
+      propertyPath: m_TagString
+      value: Grave
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c7d1782e38dd4b148bc51dc6d2ce490c, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}

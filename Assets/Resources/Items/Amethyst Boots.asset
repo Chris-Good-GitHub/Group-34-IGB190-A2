@@ -15,7 +15,7 @@ MonoBehaviour:
   itemName: Amethyst Boots
   itemDescription: Set bonus applies.
   itemTag: Set
-  itemFlavourText: A dirty boot found in a forgotten corner.
+  itemFlavourText: A dirty boot woven from amethyst found in a forgotten corner.
   classRequirement: Necromancer
   itemIcon: {fileID: 21300000, guid: 23b3151be4bfe6e458bd1ff10fa9b078, type: 3}
   itemType: 4
