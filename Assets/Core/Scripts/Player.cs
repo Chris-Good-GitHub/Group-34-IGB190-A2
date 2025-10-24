@@ -481,10 +481,10 @@ public class Player : Unit
     /// <summary>
     /// Updates the amount of experience required for a level.
     /// </summary>
-    private void UpdateExperienceRequiredForLevel ()
+    private void UpdateExperienceRequiredForLevel()
     {
 
-        experienceToNextLevel = (float) (105.1f * Math.Pow(1.6, currentLevel - 1)) - 5.1f;
+        experienceToNextLevel = (float) (105.1f * Math.Pow(1.2, currentLevel - 1)) - 5.1f;
 
     }
 
