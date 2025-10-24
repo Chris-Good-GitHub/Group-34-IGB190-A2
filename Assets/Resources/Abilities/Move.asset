@@ -15,7 +15,7 @@ MonoBehaviour:
   engine:
     rid: 8442518272303169609
   abilityName: Move
-  abilityFlavourText: I need to run.
+  abilityFlavourText: Gotta go fast!
   abilityIcon: {fileID: 21300000, guid: 7de71d851620bb246abf24f524d72a52, type: 3}
   targetMode: 3
   abilityDescription: Hold Left Click to move to a target location.

@@ -20753,7 +20753,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8366504211601627504, guid: 0eb6d68f13678de47a7184dbb4b781f5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.7
+      value: -3.57
       objectReference: {fileID: 0}
     - target: {fileID: 8366504211601627504, guid: 0eb6d68f13678de47a7184dbb4b781f5, type: 3}
       propertyPath: m_LocalPosition.z
@@ -20761,7 +20761,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8366504211601627504, guid: 0eb6d68f13678de47a7184dbb4b781f5, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.13052608
       objectReference: {fileID: 0}
     - target: {fileID: 8366504211601627504, guid: 0eb6d68f13678de47a7184dbb4b781f5, type: 3}
       propertyPath: m_LocalRotation.x
@@ -20769,7 +20769,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8366504211601627504, guid: 0eb6d68f13678de47a7184dbb4b781f5, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0.99144495
       objectReference: {fileID: 0}
     - target: {fileID: 8366504211601627504, guid: 0eb6d68f13678de47a7184dbb4b781f5, type: 3}
       propertyPath: m_LocalRotation.z
@@ -20781,7 +20781,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8366504211601627504, guid: 0eb6d68f13678de47a7184dbb4b781f5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 165
       objectReference: {fileID: 0}
     - target: {fileID: 8366504211601627504, guid: 0eb6d68f13678de47a7184dbb4b781f5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -25954,14 +25954,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Left in a dungeon to rot, the Necromancer stumbles upon a grimoire
-
-
-    <color=#88FF88>Strength</color>:
-    ???
-
-
-    <color=#FF8888>Weakness</color>: ???'
+  m_text: "Left in a dungeon to rot, the Necromancer stumbles upon a grimoire that
+    grants power over the undead. \n\nWith their newfound power, the very souls of
+    their enemies are a currency to be taken and exchanged for allies in battle.\n\n<color=#88FF88>Strength</color>:
+    Can summon allies to battle and change forms\n\n<color=#FF8888>Weakness</color>:
+    Fighting alone can often prove fatal"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f8f5700936f4a7b49b055763ecdd2065, type: 2}
   m_sharedMaterial: {fileID: -5745236825215515014, guid: f8f5700936f4a7b49b055763ecdd2065, type: 2}
@@ -26599,7 +26596,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -44.999268, y: 200}
+  m_AnchoredPosition: {x: -44.99939, y: 200}
   m_SizeDelta: {x: 350, y: 100}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &1737801533
