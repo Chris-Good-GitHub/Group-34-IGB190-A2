@@ -189,6 +189,7 @@ public class GameManager : MonoBehaviour
         public float baseMonsterXP = 10;
         public float startingXPPerLevel = 100;
         public float additionalMaxXPPerLevel = 100;
+
     }
 
     [SerializeField] private MonsterScalingValues _monsterScalingValues;
@@ -222,7 +223,7 @@ public class GameManager : MonoBehaviour
     [System.Serializable]
     public class ArmorValues
     {
-        public float maxArmor = 150;
+        public float maxArmor = 200;
         public AnimationCurve armorDamageReductionCurve;
     }
 

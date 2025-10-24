@@ -60,7 +60,6 @@ MonoBehaviour:
           - rid: 5843367094385377671
           - rid: 5843367094385377672
           - rid: 5843367094385377673
-          - rid: 5843367094385377674
         - scriptName: Set Bonus
           scriptUID: 1778059270
           hasWait: 0
@@ -203,28 +202,6 @@ MonoBehaviour:
         variableName: 
         stringSuffix: 
         nodeIcon: Effect
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-    - rid: 5843367094385377674
-      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: 
-        functionName: HaveUnitDamageUnits2
-        functionDescription: Unit/Deal Damage to Unit Group
-        functionDynamicDescription: Deal $ attack damage to $
-        functionEvaluators:
-        - rid: 5843367094385377690
-        - rid: 5843367094385377691
-        parentNode:
-          rid: -2
-        parentNodeID: -1
-        indent: 1
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: Unit
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
@@ -483,48 +460,6 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         value: 3
-    - rid: 5843367094385377690
-      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: 
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        parentNode:
-          rid: 5843367094385377674
-        parentNodeID: 0
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: '%'
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: 100
-    - rid: 5843367094385377691
-      type: {class: UnitGroupNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: Unit Group
-        functionName: GetUnitGroupVariable
-        functionDescription: Unit Group Variable
-        functionDynamicDescription: 'Unit Group: $'
-        functionEvaluators:
-        - rid: 5843367094385377703
-        parentNode:
-          rid: 5843367094385377674
-        parentNodeID: 1
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: 
-        allowValue: 0
-        allowPreset: 1
-        allowFunction: 1
     - rid: 5843367094385377699
       type: {class: NumberNode, ns: , asm: Assembly-CSharp}
       data:
@@ -545,7 +480,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 2
+        value: 3
     - rid: 5843367094385377700
       type: {class: VectorNode, ns: , asm: Assembly-CSharp}
       data:
@@ -599,28 +534,6 @@ MonoBehaviour:
         functionEvaluators: []
         parentNode:
           rid: 5843367094385377684
-        parentNodeID: 0
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: Targets
-        options: []
-    - rid: 5843367094385377703
-      type: {class: StringNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: Variable Name
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        parentNode:
-          rid: 5843367094385377691
         parentNodeID: 0
         indent: 0
         presetName: 
@@ -695,4 +608,4 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 3
+        value: 2

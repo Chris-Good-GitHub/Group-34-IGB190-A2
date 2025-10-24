@@ -9,9 +9,9 @@ using UnityEngine;
 public class Player : Unit
 {
     [HideInInspector] public float currentGold = 1000000;
-    [HideInInspector] public int currentLevel = 1;
+    public int currentLevel = 1;
     [HideInInspector] public float currentExperience = 0;
-    [HideInInspector] public float experienceToNextLevel = 100;
+    public float experienceToNextLevel = 100;
     [HideInInspector] public Ability leftClickAbility;
     [HideInInspector] public bool rightClickAlsoMoves = false;
     [DoNotSerialize] public Inventory inventory;
@@ -483,9 +483,12 @@ public class Player : Unit
     /// </summary>
     private void UpdateExperienceRequiredForLevel ()
     {
-        experienceToNextLevel = GameManager.playerExperienceValues.startingXPPerLevel;
-        experienceToNextLevel += GameManager.playerExperienceValues.additionalMaxXPPerLevel * currentLevel;
+
+        experienceToNextLevel = (float) (105.1f * Math.Pow(1.6, currentLevel - 1)) - 5.1f;
+
     }
+
+
 
     /// <summary>
     /// When an item is equipped, add its stats to the player.

@@ -117279,7 +117279,7 @@ MonoBehaviour:
   baseMaxHealth: 100
   baseMaxResource: 100
   baseMovementSpeed: 3
-  baseArmor: 100
+  baseArmor: 0
   baseCriticalStrikeChance: 0.1
   baseCriticalStrikeDamage: 2
   baseHealthRegen: 5
@@ -167878,7 +167878,7 @@ MonoBehaviour:
     empoweredMonsterLegendaryDropChance: 0
   _playerExperienceValues:
     baseMonsterXP: 10
-    startingXPPerLevel: 1000
+    startingXPPerLevel: 100
     additionalMaxXPPerLevel: 0
   _monsterScalingValues:
     increasedHealthPerPlayerLevel: 0.25
