@@ -21,7 +21,7 @@ MonoBehaviour:
   abilityDescription: "Fire magic towards the target location, dealing 100% attack
     damage and [Death Touching] the enemies hit. \n\n[Death Touched] When the marked
     unit dies generate resource for summoning allies."
-  abilityAnimation: Soul Mark
+  abilityAnimation: Punch
   range: 8
   castTime: 1
   abilityCooldown: 0
