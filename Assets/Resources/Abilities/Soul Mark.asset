@@ -45,71 +45,6 @@ MonoBehaviour:
     RefIds:
     - rid: -2
       type: {class: , ns: , asm: }
-    - rid: 252622140536259264
-      type: {class: NestingActionNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: 
-        functionName: DoActionsIfBool
-        functionDescription: Flow/If Statement
-        functionDynamicDescription: Do actions if $
-        functionEvaluators:
-        - rid: 252622140536259265
-        parentNode:
-          rid: -2
-        parentNodeID: -1
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: Condition
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-    - rid: 252622140536259265
-      type: {class: BoolNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: Bool
-        functionName: RegionExists
-        functionDescription: Region/Region Exists
-        functionDynamicDescription: Region labeled $ exists
-        functionEvaluators:
-        - rid: 252622140536259269
-        parentNode:
-          rid: 252622140536259264
-        parentNodeID: 0
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: 0
-    - rid: 252622140536259269
-      type: {class: StringNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 3
-        tempName: Region Name
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        parentNode:
-          rid: -2
-        parentNodeID: -1
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: 
-        options: []
     - rid: 2921985435401715785
       type: {class: EventNode, ns: , asm: Assembly-CSharp}
       data:
@@ -648,12 +583,11 @@ MonoBehaviour:
           - rid: 8442517955232137220
           conditionNodes: []
           actionNodes:
-          - rid: 8442517955232137222
           - rid: 8442517955232137221
           - rid: 2921985435401715796
           - rid: 5926302159653830810
           - rid: 2921985435401715797
-          - rid: 252622140536259264
+          - rid: 8442517955232137222
         - scriptName: Terrain Collision
           scriptUID: 877343950
           hasWait: 0

@@ -73,6 +73,10 @@ PrefabInstance:
       value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: c7d1782e38dd4b148bc51dc6d2ce490c, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c7d1782e38dd4b148bc51dc6d2ce490c, type: 3}
       propertyPath: m_Name
       value: Grave_a
       objectReference: {fileID: 0}
@@ -131,6 +135,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: c7d1782e38dd4b148bc51dc6d2ce490c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8456695249544334332}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: c7d1782e38dd4b148bc51dc6d2ce490c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5847551704276588470}
     - targetCorrespondingSourceObject: {fileID: 3835184087135362983, guid: c7d1782e38dd4b148bc51dc6d2ce490c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1008248289788784650}
@@ -193,7 +200,7 @@ MonoBehaviour:
   baseAttacksPerSecond: 1
   baseMaxHealth: 100
   baseMaxResource: 100
-  baseMovementSpeed: 3
+  baseMovementSpeed: 0
   baseArmor: 100
   baseCriticalStrikeChance: 0.2
   baseCriticalStrikeDamage: 2
@@ -208,7 +215,7 @@ MonoBehaviour:
   onHitFeedback: {fileID: 0}
   target: {fileID: 0}
   isDead: 0
-  faction: 2
+  faction: 1
   spawnEffect: {fileID: 0}
   notMarked: 1
   goldModifier: 1
@@ -221,6 +228,28 @@ MonoBehaviour:
   uiHeight: 2
   spawnLevel: 1
   spawnLikelihood: 5
+--- !u!195 &5847551704276588470
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2016175617933790288}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 0
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 0
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!23 &2365520078812209386 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 4030597566454665707, guid: c7d1782e38dd4b148bc51dc6d2ce490c, type: 3}
