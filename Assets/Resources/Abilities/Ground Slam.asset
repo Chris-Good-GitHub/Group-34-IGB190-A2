@@ -19,7 +19,7 @@ MonoBehaviour:
   abilityIcon: {fileID: 21300000, guid: 8095cd4e844ae5d4f9ffee0df9cba6f5, type: 3}
   targetMode: 4
   abilityDescription: Swing with a mighty attack, dealing 150% attack damage to all
-    units 3m from the caster. But also deal 100% attack damage to yourself
+    units 3m from the caster. But also deal 20% attack damage to yourself
   abilityAnimation: Two Hand Slash
   range: 2
   castTime: 0
@@ -86,7 +86,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 100
+        value: 20
     - rid: 5926302282114924942
       type: {class: UnitNode, ns: , asm: Assembly-CSharp}
       data:

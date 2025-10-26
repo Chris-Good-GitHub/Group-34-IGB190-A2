@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3ba5be5e9a4ad5d49a4183e2e4440724, type: 3}
-  m_Name: Necromancer Ult
+  m_Name: Transform to Skeleton
   m_EditorClassIdentifier: 
   engine:
     rid: 5926301772953419980
-  abilityName: Necromancer Ult
+  abilityName: Transform to Skeleton
   abilityFlavourText: Draw power and transform
   abilityIcon: {fileID: 21300000, guid: 5e21898b38b93b040bcea9429e8b4188, type: 3}
   targetMode: 0
@@ -22,7 +22,7 @@ MonoBehaviour:
   abilityAnimation: Shout
   range: 999
   castTime: 0
-  abilityCooldown: 10
+  abilityCooldown: 3
   abilityCost: 0
   movementLock: 1
   animationActivationPosition: 0.5
@@ -62,21 +62,9 @@ MonoBehaviour:
           - rid: 5926302200042881216
           - rid: 5926302200042881220
           - rid: 5926302200042881224
-          - rid: 5926302212181983240
           - rid: 5926302200042881646
-          - rid: 5926302212181983337
+          - rid: 5926302295406674363
           - rid: 5926302052716118024
-        - scriptName: On Change
-          scriptUID: 120021909
-          hasWait: 0
-          eventNodes:
-          - rid: 5926302282114925039
-          conditionNodes: []
-          actionNodes:
-          - rid: 5926302282114925040
-          - rid: 5926302282114925041
-          - rid: 5926302282114925042
-          - rid: 5926302282114925043
     - rid: 5926301976696717392
       type: {class: EventNode, ns: , asm: Assembly-CSharp}
       data:
@@ -1073,7 +1061,7 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         value: {fileID: 0}
-    - rid: 5926302212181983240
+    - rid: 5926302295406674363
       type: {class: ActionNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 2
@@ -1082,9 +1070,9 @@ MonoBehaviour:
         functionDescription: Unit/Ability/Reduce Current Ability Cooldown
         functionDynamicDescription: Reduce current cooldown of $ on $ by $
         functionEvaluators:
-        - rid: 5926302212181983241
-        - rid: 5926302212181983242
-        - rid: 5926302212181983243
+        - rid: 5926302295406674364
+        - rid: 5926302295406674365
+        - rid: 5926302295406674366
         parentNode:
           rid: -2
         parentNodeID: -1
@@ -1096,7 +1084,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-    - rid: 5926302212181983241
+    - rid: 5926302295406674364
       type: {class: AbilityNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 0
@@ -1106,7 +1094,7 @@ MonoBehaviour:
         functionDynamicDescription: 
         functionEvaluators: []
         parentNode:
-          rid: 5926302212181983240
+          rid: 5926302295406674363
         parentNodeID: 0
         indent: 0
         presetName: 
@@ -1116,8 +1104,8 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 0
-        value: {fileID: 11400000}
-    - rid: 5926302212181983242
+        value: {fileID: 11400000, guid: 0c6c7a964b4d0a041b6381382a63cb2b, type: 2}
+    - rid: 5926302295406674365
       type: {class: UnitNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 4
@@ -1127,7 +1115,7 @@ MonoBehaviour:
         functionDynamicDescription: 
         functionEvaluators: []
         parentNode:
-          rid: 5926302212181983240
+          rid: 5926302295406674363
         parentNodeID: 1
         indent: 0
         presetName: Player
@@ -1138,7 +1126,7 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         value: {fileID: 0}
-    - rid: 5926302212181983243
+    - rid: 5926302295406674366
       type: {class: NumberNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 0
@@ -1148,7 +1136,7 @@ MonoBehaviour:
         functionDynamicDescription: 
         functionEvaluators: []
         parentNode:
-          rid: 5926302212181983240
+          rid: 5926302295406674363
         parentNodeID: 2
         indent: 0
         presetName: 
@@ -1158,436 +1146,4 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 10
-    - rid: 5926302212181983337
-      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: 
-        functionName: ReduceAbilityCooldown
-        functionDescription: Unit/Ability/Reduce Current Ability Cooldown
-        functionDynamicDescription: Reduce current cooldown of $ on $ by $
-        functionEvaluators:
-        - rid: 5926302212181983338
-        - rid: 5926302212181983339
-        - rid: 5926302212181983340
-        parentNode:
-          rid: -2
-        parentNodeID: -1
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: Unit
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-    - rid: 5926302212181983338
-      type: {class: AbilityNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: Ability
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        parentNode:
-          rid: 5926302212181983337
-        parentNodeID: 0
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 0
-        value: {fileID: 11400000, guid: 0c6c7a964b4d0a041b6381382a63cb2b, type: 2}
-    - rid: 5926302212181983339
-      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 4
-        tempName: Unit
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        parentNode:
-          rid: 5926302212181983337
-        parentNodeID: 1
-        indent: 0
-        presetName: Player
-        variableName: 
-        stringSuffix: 
-        nodeIcon: 
-        allowValue: 0
-        allowPreset: 1
-        allowFunction: 1
-        value: {fileID: 0}
-    - rid: 5926302212181983340
-      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: 
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        parentNode:
-          rid: 5926302212181983337
-        parentNodeID: 2
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: s
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: -10
-    - rid: 5926302282114925039
-      type: {class: EventNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: 
-        functionName: UnitStartCast
-        functionDescription: Ability/When a unit starts casting specific ability
-        functionDynamicDescription: 'When Unit Starts Casting $ (Presets: <color=yellow>Casting
-          Unit</color>, <color=yellow>Ability Cast</color>)'
-        functionEvaluators: []
-        parentNode:
-          rid: -2
-        parentNodeID: -1
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: Event
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        presets:
-        - Casting Unit
-        - Ability Cast
-    - rid: 5926302282114925040
-      type: {class: NestingActionNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: 
-        functionName: DoActionsIfBool
-        functionDescription: Flow/If Statement
-        functionDynamicDescription: Do actions if $
-        functionEvaluators:
-        - rid: 5926302282114925044
-        parentNode:
-          rid: -2
-        parentNodeID: -1
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: Condition
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-    - rid: 5926302282114925041
-      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: 
-        functionName: DisableAbility
-        functionDescription: Unit/Ability/Disable Ability on Unit
-        functionDynamicDescription: Disable $ on $
-        functionEvaluators:
-        - rid: 5926302282114925045
-        - rid: 5926302282114925046
-        parentNode:
-          rid: -2
-        parentNodeID: -1
-        indent: 1
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: Unit
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-    - rid: 5926302282114925042
-      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: 
-        functionName: Wait
-        functionDescription: Flow/Wait
-        functionDynamicDescription: Wait for $ second(s)
-        functionEvaluators:
-        - rid: 5926302282114925047
-        parentNode:
-          rid: -2
-        parentNodeID: -1
-        indent: 1
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: Timer
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-    - rid: 5926302282114925043
-      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: 
-        functionName: EnableAbility
-        functionDescription: Unit/Ability/Enable Ability on Unit
-        functionDynamicDescription: Enable $ on $
-        functionEvaluators:
-        - rid: 5926302282114925048
-        - rid: 5926302282114925049
-        parentNode:
-          rid: -2
-        parentNodeID: -1
-        indent: 1
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: Unit
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-    - rid: 5926302282114925044
-      type: {class: BoolNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: Bool
-        functionName: AndComparison
-        functionDescription: Comparisons/And Comparison
-        functionDynamicDescription: $ and $
-        functionEvaluators:
-        - rid: 5926302282114925050
-        - rid: 5926302282114925051
-        parentNode:
-          rid: 5926302282114925040
-        parentNodeID: 0
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: 0
-    - rid: 5926302282114925045
-      type: {class: AbilityNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: Ability
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        parentNode:
-          rid: 5926302282114925041
-        parentNodeID: 0
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 0
-        allowFunction: 0
-        value: {fileID: 11400000, guid: 0c6c7a964b4d0a041b6381382a63cb2b, type: 2}
-    - rid: 5926302282114925046
-      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 4
-        tempName: Unit
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        parentNode:
-          rid: 5926302282114925041
-        parentNodeID: 1
-        indent: 0
-        presetName: Ability Owner
-        variableName: 
-        stringSuffix: 
-        nodeIcon: 
-        allowValue: 0
-        allowPreset: 1
-        allowFunction: 1
-        value: {fileID: 0}
-    - rid: 5926302282114925047
-      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: 
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        parentNode:
-          rid: 5926302282114925042
-        parentNodeID: 0
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: 10
-    - rid: 5926302282114925048
-      type: {class: AbilityNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: Ability
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        parentNode:
-          rid: 5926302282114925043
-        parentNodeID: 0
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 0
-        allowFunction: 0
-        value: {fileID: 11400000, guid: 0c6c7a964b4d0a041b6381382a63cb2b, type: 2}
-    - rid: 5926302282114925049
-      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 4
-        tempName: Unit
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        parentNode:
-          rid: 5926302282114925043
-        parentNodeID: 1
-        indent: 0
-        presetName: Ability Owner
-        variableName: 
-        stringSuffix: 
-        nodeIcon: 
-        allowValue: 0
-        allowPreset: 1
-        allowFunction: 1
-        value: {fileID: 0}
-    - rid: 5926302282114925050
-      type: {class: BoolNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: Bool
-        functionName: UnitCanCastAbility
-        functionDescription: Unit/Unit Can Cast ability
-        functionDynamicDescription: $ can cast $
-        functionEvaluators:
-        - rid: 5926302282114925052
-        - rid: 5926302282114925053
-        parentNode:
-          rid: 5926302282114925044
-        parentNodeID: 0
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: 0
-    - rid: 5926302282114925051
-      type: {class: BoolNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: Bool
-        functionName: UnitIsCasting
-        functionDescription: Unit/Unit Is Casting
-        functionDynamicDescription: $ is casting
-        functionEvaluators:
-        - rid: 5926302282114925054
-        parentNode:
-          rid: 5926302282114925044
-        parentNodeID: 1
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: 0
-    - rid: 5926302282114925052
-      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 4
-        tempName: Unit
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        parentNode:
-          rid: 5926302282114925050
-        parentNodeID: 0
-        indent: 0
-        presetName: Casting Unit
-        variableName: 
-        stringSuffix: 
-        nodeIcon: 
-        allowValue: 0
-        allowPreset: 1
-        allowFunction: 1
-        value: {fileID: 0}
-    - rid: 5926302282114925053
-      type: {class: AbilityNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: Ability
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        parentNode:
-          rid: 5926302282114925050
-        parentNodeID: 1
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: {fileID: 11400000, guid: 0c6c7a964b4d0a041b6381382a63cb2b, type: 2}
-    - rid: 5926302282114925054
-      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 4
-        tempName: Unit
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        parentNode:
-          rid: 5926302282114925051
-        parentNodeID: 0
-        indent: 0
-        presetName: Casting Unit
-        variableName: 
-        stringSuffix: 
-        nodeIcon: 
-        allowValue: 0
-        allowPreset: 1
-        allowFunction: 1
-        value: {fileID: 0}
+        value: -3

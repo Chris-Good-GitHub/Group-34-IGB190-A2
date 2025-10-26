@@ -397,7 +397,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 30
+        value: 20
     - rid: 2658598258988810326
       type: {class: ProjectileNode, ns: , asm: Assembly-CSharp}
       data:

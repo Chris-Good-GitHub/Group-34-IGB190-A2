@@ -45,7 +45,7 @@ MonoBehaviour:
     maximum: 0.04
     isPercent: 0
   minimumDropLevel: 6
-  canPurchaseInShop: 0
+  canPurchaseInShop: 1
   canDropOffMonster: 1
   template: {fileID: 0}
   engine:
@@ -66,7 +66,7 @@ MonoBehaviour:
       conditionNodes: []
       actionNodes:
       - rid: 5926302188992201257
-    - scriptName: Deal damage depending on gold
+    - scriptName: Life Steal
       scriptUID: 1362713136
       hasWait: 0
       eventNodes:
@@ -74,7 +74,7 @@ MonoBehaviour:
       conditionNodes:
       - rid: 3315308057013518556
       actionNodes:
-      - rid: 3315308057013518560
+      - rid: 5926302295406674367
   references:
     version: 2
     RefIds:
@@ -187,7 +187,7 @@ MonoBehaviour:
           rid: 3315308057013518556
         parentNodeID: 0
         indent: 0
-        presetName: Damaged Unit
+        presetName: Damaging Unit
         variableName: 
         stringSuffix: 
         nodeIcon: 
@@ -240,114 +240,6 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         value: {fileID: 243147159722867909, guid: 374d47c23bdc7f5469a02d3129649e86, type: 3}
-    - rid: 3315308057013518560
-      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: 
-        functionName: HaveUnitDamageUnit2
-        functionDescription: Unit/Deal Damage to Unit
-        functionDynamicDescription: Deal $ attack damage to $
-        functionEvaluators:
-        - rid: 3315308057013518561
-        - rid: 3315308057013518562
-        parentNode:
-          rid: -2
-        parentNodeID: -1
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: Unit
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-    - rid: 3315308057013518561
-      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: 
-        functionName: Division
-        functionDescription: Math/Division
-        functionDynamicDescription: $ / $
-        functionEvaluators:
-        - rid: 3315308057013518581
-        - rid: 3315308057013518582
-        parentNode:
-          rid: 3315308057013518560
-        parentNodeID: 0
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: '%'
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: 100
-    - rid: 3315308057013518562
-      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 4
-        tempName: Unit
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        parentNode:
-          rid: 3315308057013518560
-        parentNodeID: 1
-        indent: 0
-        presetName: Damaged Unit
-        variableName: 
-        stringSuffix: 
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: {fileID: 243147159722867909, guid: 374d47c23bdc7f5469a02d3129649e86, type: 3}
-    - rid: 3315308057013518581
-      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: 
-        functionName: GetPlayerGold
-        functionDescription: Player/Player Gold
-        functionDynamicDescription: Player Gold
-        functionEvaluators: []
-        parentNode:
-          rid: -2
-        parentNodeID: -1
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: 0
-    - rid: 3315308057013518582
-      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: 
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        parentNode:
-          rid: -2
-        parentNodeID: -1
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: 20
     - rid: 5926302188992201251
       type: {class: ActionNode, ns: , asm: Assembly-CSharp}
       data:
@@ -612,3 +504,67 @@ MonoBehaviour:
         allowFunction: 0
         value: Set Bonus
         options: []
+    - rid: 5926302295406674367
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: AddHealth
+        functionDescription: Unit/Add Health
+        functionDynamicDescription: Add $ health to $
+        functionEvaluators:
+        - rid: 5926302295406674368
+        - rid: 5926302295406674369
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: Unit
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 5926302295406674368
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 5926302295406674367
+        parentNodeID: 0
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 10
+    - rid: 5926302295406674369
+      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 4
+        tempName: Unit
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 5926302295406674367
+        parentNodeID: 1
+        indent: 0
+        presetName: Item Owner
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 0
+        allowPreset: 1
+        allowFunction: 1
+        value: {fileID: 0}

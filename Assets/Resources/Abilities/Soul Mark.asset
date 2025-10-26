@@ -19,8 +19,8 @@ MonoBehaviour:
   abilityIcon: {fileID: 21300000, guid: 13961b2c7a8f6f44a8fec84696b6c293, type: 3}
   targetMode: 4
   abilityDescription: "Fire magic towards the target location, dealing 100% attack
-    damage and [Death Touching] the enemies hit. \n\nSet Bonus: After equipping 2
-    Amethyst items, increases area of effect"
+    damage and [Death Touching] the enemies hit.\r\nSet Bonus: After equipping 2
+    Amethyst items, increases area of effect\r"
   abilityAnimation: Punch
   range: 8
   castTime: 1
@@ -317,7 +317,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 4
+        value: 2
     - rid: 3315308430608564237
       type: {class: NumberNode, ns: , asm: Assembly-CSharp}
       data:
@@ -338,7 +338,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 5
+        value: 3
     - rid: 5926302159653830808
       type: {class: UnitNode, ns: , asm: Assembly-CSharp}
       data:
@@ -562,6 +562,249 @@ MonoBehaviour:
         allowFunction: 0
         value: Set Bonus
         options: []
+    - rid: 5926302295406674146
+      type: {class: EventNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: ProjectileReachesGoal
+        functionDescription: Projectile/Projectile reaches its goal
+        functionDynamicDescription: 'Projectile from this object reaches its goal
+          (Presets: <color=yellow>Event Projectile</color>, <color=yellow>Casting
+          Unit</color>, <color=yellow>Goal Position</color>, <color=yellow>Goal Unit</color>)'
+        functionEvaluators: []
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: Projectile
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        presets:
+        - Event Projectile
+        - Casting Unit
+        - Goal Position
+        - Goal Unit
+    - rid: 5926302295406674154
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: SetUnitGroupVariable
+        functionDescription: Variables/Set Unit Group Variable
+        functionDynamicDescription: Set Unit Group named $ to $
+        functionEvaluators:
+        - rid: 5926302295406674155
+        - rid: 5926302295406674156
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: Variable
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 5926302295406674155
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Variable Name
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 5926302295406674154
+        parentNodeID: 0
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 0
+        allowFunction: 0
+        value: Soul Marks
+        options: []
+    - rid: 5926302295406674156
+      type: {class: UnitGroupNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: Unit Group
+        functionName: AllEnemiesWithinRangeOfPoint2
+        functionDescription: All Enemies Near Point
+        functionDynamicDescription: All enemies within $ of $
+        functionEvaluators:
+        - rid: 5926302295406674157
+        - rid: 5926302295406674158
+        parentNode:
+          rid: 5926302295406674154
+        parentNodeID: 1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 5926302295406674157
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 5926302295406674156
+        parentNodeID: 0
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: m
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 3
+    - rid: 5926302295406674158
+      type: {class: VectorNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: Location
+        functionName: PositionOfProjectile
+        functionDescription: Unit/Position of Projectile
+        functionDynamicDescription: Position of $
+        functionEvaluators:
+        - rid: 5926302295406674159
+        parentNode:
+          rid: 5926302295406674156
+        parentNodeID: 1
+        indent: 0
+        presetName: Goal Position
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 0
+        allowPreset: 1
+        allowFunction: 1
+        value: {x: 0, y: 0, z: 0}
+    - rid: 5926302295406674159
+      type: {class: ProjectileNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 4
+        tempName: Projectile
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 5926302295406674158
+        parentNodeID: 0
+        indent: 0
+        presetName: Event Projectile
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 0
+        allowPreset: 1
+        allowFunction: 1
+        value: {fileID: 0}
+    - rid: 5926302295406674160
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: HaveUnitDamageUnits2
+        functionDescription: Unit/Deal Damage to Unit Group
+        functionDynamicDescription: Deal $ attack damage to $
+        functionEvaluators:
+        - rid: 5926302295406674161
+        - rid: 5926302295406674162
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: Unit
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 5926302295406674161
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 5926302295406674160
+        parentNodeID: 0
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: '%'
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 150
+    - rid: 5926302295406674162
+      type: {class: UnitGroupNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: Unit Group
+        functionName: GetUnitGroupVariable
+        functionDescription: Variable/Unit Group Variable
+        functionDynamicDescription: 'Unit Group: $'
+        functionEvaluators:
+        - rid: 5926302295406674163
+        parentNode:
+          rid: 5926302295406674160
+        parentNodeID: 1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 0
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 5926302295406674163
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Text
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 5926302295406674162
+        parentNodeID: 0
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 0
+        allowFunction: 0
+        value: Soul Marks
+        options: []
     - rid: 8442517955232137216
       type: {class: LogicEngine, ns: , asm: Assembly-CSharp}
       data:
@@ -593,6 +836,7 @@ MonoBehaviour:
           hasWait: 0
           eventNodes:
           - rid: 8442517955232137223
+          - rid: 5926302295406674146
           conditionNodes: []
           actionNodes:
           - rid: 8442517955232137224
@@ -605,6 +849,8 @@ MonoBehaviour:
           - rid: 5926302188992200936
           actionNodes:
           - rid: 3315308430608564232
+          - rid: 5926302295406674154
+          - rid: 5926302295406674160
     - rid: 8442517955232137218
       type: {class: ActionNode, ns: , asm: Assembly-CSharp}
       data:
