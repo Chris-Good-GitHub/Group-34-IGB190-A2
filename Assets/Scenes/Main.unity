@@ -116784,7 +116784,7 @@ MonoBehaviour:
   rightClickAlsoMoves: 0
   SetBonus: 0
   levelUpFeedback: {fileID: 11400000, guid: 9cdaa1d98fc0cc4428a905e670a76812, type: 2}
-  resourceName: ResourceJuice
+  resourceName: Soul Essence
   resourceMaterial: {fileID: 2100000, guid: dd6dc55119cde6f4ab2a8561e505a971, type: 2}
   bonusDamagePerLevel: 0.2
   bonusHealthPerLevel: 0.5
