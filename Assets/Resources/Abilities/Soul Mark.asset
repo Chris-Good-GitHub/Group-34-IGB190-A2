@@ -19,8 +19,8 @@ MonoBehaviour:
   abilityIcon: {fileID: 21300000, guid: 13961b2c7a8f6f44a8fec84696b6c293, type: 3}
   targetMode: 4
   abilityDescription: "Fire magic towards the target location, dealing 100% attack
-    damage and [Death Touching] the enemies hit. \n\n[Death Touched] When the marked
-    unit dies generate resource for summoning allies."
+    damage and [Death Touching] the enemies hit. \n\nSet Bonus: After equipping 2
+    Amethyst items, increases area of effect"
   abilityAnimation: Punch
   range: 8
   castTime: 1
